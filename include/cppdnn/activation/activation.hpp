@@ -2,4 +2,4 @@
 #include <cppdnn/activation/relu_layer.hpp>
 #include <cppdnn/activation/sigmoid_layer.hpp>
 #include <cppdnn/activation/softmax_layer.hpp>
-#incl
+#include <cppdnn/activation/tanh_layer.hpp>
