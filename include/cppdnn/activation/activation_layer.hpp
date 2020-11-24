@@ -1,1 +1,1 @@
-#i
+#ifndef CPPDNN_HEADER_ACTIVATION_A
