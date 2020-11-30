@@ -4,4 +4,7 @@
 #include <cppdnn/layer.hpp>
 #include <cppdnn/object.hpp>
 
-namespace c
+namespace cppdnn
+{
+	template<typename Ty_>
+	cla
