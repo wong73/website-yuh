@@ -7,4 +7,4 @@
 namespace cppdnn
 {
 	template<typename Ty_>
-	cla
+	class basic_activation_layer : pub
