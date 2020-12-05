@@ -7,4 +7,7 @@
 namespace cppdnn
 {
 	template<typename Ty_>
-	class basic_activation_layer : pub
+	class basic_activation_layer : public basic_layer<Ty_>
+	{
+	public:
+		basic_a
