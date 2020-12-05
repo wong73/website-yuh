@@ -10,4 +10,5 @@ namespace cppdnn
 	class basic_activation_layer : public basic_layer<Ty_>
 	{
 	public:
-		basic_activation_layer(const basic_activation_lay
+		basic_activation_layer(const basic_activation_layer& layer) = delete;
+		basic_activa
