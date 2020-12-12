@@ -11,4 +11,4 @@ namespace cppdnn
 	{
 	public:
 		basic_activation_layer(const basic_activation_layer& layer) = delete;
-		basic_activa
+		basic_activation_layer(basic_activation_layer&& l
