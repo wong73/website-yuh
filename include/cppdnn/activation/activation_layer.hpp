@@ -15,4 +15,7 @@ namespace cppdnn
 		virtual ~basic_activation_layer() override = default;
 
 	protected:
-		basic_activation_layer() n
+		basic_activation_layer() noexcept = default;
+
+	public:
+		basic_activation_lay
