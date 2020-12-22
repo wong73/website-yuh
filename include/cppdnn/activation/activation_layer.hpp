@@ -14,4 +14,5 @@ namespace cppdnn
 		basic_activation_layer(basic_activation_layer&& layer) = delete;
 		virtual ~basic_activation_layer() override = default;
 
-	prot
+	protected:
+		basic_activation_layer() n
