@@ -18,4 +18,4 @@ namespace cppdnn
 		basic_activation_layer() noexcept = default;
 
 	public:
-		basic_activation_lay
+		basic_activation_layer& operator=(const basic_activation_l
