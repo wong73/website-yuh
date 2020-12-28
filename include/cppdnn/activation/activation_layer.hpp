@@ -18,4 +18,5 @@ namespace cppdnn
 		basic_activation_layer() noexcept = default;
 
 	public:
-		basic_activation_layer& operator=(const basic_activation_l
+		basic_activation_layer& operator=(const basic_activation_layer& layer) = delete;
+		basic_activation_l
