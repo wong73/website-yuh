@@ -21,4 +21,4 @@ namespace cppdnn
 		basic_activation_layer& operator=(const basic_activation_layer& layer) = delete;
 		basic_activation_layer& operator=(basic_activation_layer&& layer) = delete;
 		bool operator==(const basic_activation_layer& layer) = delete;
-		bool ope
+		bool operator!=(const basic_activation_layer& l
