@@ -24,4 +24,7 @@ namespace cppdnn
 		bool operator!=(const basic_activation_layer& layer) = delete;
 
 	public:
-		virtual void forward(const basic_object_ptr<Ty_>& input, basic_object_ptr<Ty_>& output) const ov
+		virtual void forward(const basic_object_ptr<Ty_>& input, basic_object_ptr<Ty_>& output) const override;
+		
+	protected:
+		virtual void function
