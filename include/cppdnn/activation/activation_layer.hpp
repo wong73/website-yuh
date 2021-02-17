@@ -34,3 +34,4 @@ namespace cppdnn
 }
 
 #include "details/activation_layer.hpp"
+#endif
