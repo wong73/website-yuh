@@ -33,4 +33,4 @@ namespace cppdnn
 	using activation_layer = basic_activation_layer<double>;
 }
 
-#includ
+#include "details/activation_layer.hpp"
