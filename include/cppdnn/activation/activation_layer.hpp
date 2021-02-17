@@ -30,4 +30,7 @@ namespace cppdnn
 		virtual void function(const basic_object_ptr<Ty_>& input) const = 0;
 	};
 
-	using activation_layer 
+	using activation_layer = basic_activation_layer<double>;
+}
+
+#includ
