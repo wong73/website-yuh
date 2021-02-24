@@ -4,4 +4,4 @@
 namespace cppdnn
 {
 	template<typename Ty_>
-	void basi
+	void basic_activation_layer<Ty_>::f
