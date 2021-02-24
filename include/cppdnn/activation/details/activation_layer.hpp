@@ -3,3 +3,5 @@
 
 namespace cppdnn
 {
+	template<typename Ty_>
+	void basi
