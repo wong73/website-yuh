@@ -7,4 +7,8 @@ namespace cppdnn
 	void basic_activation_layer<Ty_>::forward(const basic_object_ptr<Ty_>& input, basic_object_ptr<Ty_>& output) const
 	{
 		output = input->copy();
-		funct
+		function(output);
+	}
+}
+
+#endif
