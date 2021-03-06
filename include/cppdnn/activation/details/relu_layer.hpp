@@ -1,4 +1,8 @@
 #ifndef CPPDNN_HEADER_ACTIVATION_DETAILS_RELU_LAYER_HPP
 #define CPPDNN_HEADER_ACTIVATION_DETAILS_RELU_LAYER_HPP
 
-#include <al
+#include <algorithm>
+
+namespace cppdnn
+{
+	template
