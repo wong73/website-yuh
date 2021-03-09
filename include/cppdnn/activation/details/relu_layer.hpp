@@ -6,4 +6,4 @@
 namespace cppdnn
 {
 	template<typename Ty_>
-	void basic_relu_lay
+	void basic_relu_layer<Ty_>::function(const basic_object_p
