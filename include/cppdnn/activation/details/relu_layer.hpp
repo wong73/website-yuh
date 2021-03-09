@@ -5,4 +5,5 @@
 
 namespace cppdnn
 {
-	template
+	template<typename Ty_>
+	void basic_relu_lay
