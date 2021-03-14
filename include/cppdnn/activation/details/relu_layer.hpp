@@ -8,4 +8,6 @@ namespace cppdnn
 	template<typename Ty_>
 	void basic_relu_layer<Ty_>::function(const basic_object_ptr<Ty_>& input) const
 	{
-		input->apply([](const basic_object_ptr<Ty_>&
+		input->apply([](const basic_object_ptr<Ty_>& value)
+		{
+			Ty_& data = to_value_ref(value)->d
