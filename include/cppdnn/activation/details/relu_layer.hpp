@@ -10,4 +10,6 @@ namespace cppdnn
 	{
 		input->apply([](const basic_object_ptr<Ty_>& value)
 		{
-			Ty_& data = to_value_ref(value)->d
+			Ty_& data = to_value_ref(value)->data();
+			data = std::max(Ty_(0), data);
+		}
