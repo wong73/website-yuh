@@ -12,4 +12,8 @@ namespace cppdnn
 		{
 			Ty_& data = to_value_ref(value)->data();
 			data = std::max(Ty_(0), data);
-		}
+		});
+	}
+
+	template<typename Ty_>
+	basic_layer_ptr
