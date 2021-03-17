@@ -18,4 +18,8 @@ namespace cppdnn
 	template<typename Ty_>
 	basic_layer_ptr<Ty_> relu()
 	{
-		return std::make_shared<b
+		return std::make_shared<basic_relu_layer<Ty_>>();
+	}
+}
+
+#endif
