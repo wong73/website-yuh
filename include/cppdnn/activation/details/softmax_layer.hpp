@@ -5,4 +5,5 @@
 
 namespace cppdnn
 {
-	template<typen
+	template<typename Ty_>
+	void basic_softmax_layer<Ty_>::f
