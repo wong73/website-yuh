@@ -1,4 +1,8 @@
 #ifndef CPPDNN_HEADER_ACTIVATION_DETAILS_SOFTMAX_LAYER_HPP
 #define CPPDNN_HEADER_ACTIVATION_DETAILS_SOFTMAX_LAYER_HPP
 
-#include <cma
+#include <cmath>
+
+namespace cppdnn
+{
+	template<typen
