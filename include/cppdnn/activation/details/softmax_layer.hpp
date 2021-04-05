@@ -8,4 +8,7 @@ namespace cppdnn
 	template<typename Ty_>
 	void basic_softmax_layer<Ty_>::forward(const basic_object_ptr<Ty_>& input, basic_object_ptr<Ty_>& output) const
 	{
-		output = inp
+		output = input->copy();
+
+		Ty_ sum = 0;
+		input
