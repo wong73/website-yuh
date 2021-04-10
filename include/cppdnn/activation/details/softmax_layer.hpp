@@ -11,4 +11,6 @@ namespace cppdnn
 		output = input->copy();
 
 		Ty_ sum = 0;
-		input->for_each([&sum](basic_object_ptr<T
+		input->for_each([&sum](basic_object_ptr<Ty_> value) mutable
+		{
+			sum += std::
