@@ -16,4 +16,6 @@ namespace cppdnn
 			sum += std::exp(to_value_ref(value)->data());
 		});
 
-		output->apply([sum](const ba
+		output->apply([sum](const basic_object_ptr<Ty_>& value)
+		{
+	
