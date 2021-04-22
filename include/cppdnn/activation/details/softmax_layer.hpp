@@ -14,4 +14,6 @@ namespace cppdnn
 		input->for_each([&sum](basic_object_ptr<Ty_> value) mutable
 		{
 			sum += std::exp(to_value_ref(value)->data());
-		
+		});
+
+		output->apply([sum](const ba
