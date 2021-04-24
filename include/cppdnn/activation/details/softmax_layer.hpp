@@ -18,4 +18,4 @@ namespace cppdnn
 
 		output->apply([sum](const basic_object_ptr<Ty_>& value)
 		{
-	
+			Ty_ temp = to_value_ref(value)->d
