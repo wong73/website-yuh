@@ -20,4 +20,8 @@ namespace cppdnn
 		{
 			Ty_ temp = to_value_ref(value)->data();
 
-			to_value_ref(value)->data() = std::ex
+			to_value_ref(value)->data() = std::exp(temp) / sum;
+		});
+	}
+
+	templa
