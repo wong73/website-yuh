@@ -24,4 +24,5 @@ namespace cppdnn
 		});
 	}
 
-	templa
+	template<typename Ty_>
+	void basic_softmax
