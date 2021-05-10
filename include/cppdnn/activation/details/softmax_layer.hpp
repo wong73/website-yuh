@@ -28,4 +28,5 @@ namespace cppdnn
 	void basic_softmax_layer<Ty_>::function(const basic_object_ptr<Ty_>&) const
 	{}
 
-	template<type
+	template<typename Ty_>
+	basic_layer_ptr<Ty_> so
