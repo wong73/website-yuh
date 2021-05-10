@@ -25,4 +25,4 @@ namespace cppdnn
 	}
 
 	template<typename Ty_>
-	void basic_softmax
+	void basic_softmax_layer<Ty_>::function(const basic_object_p
