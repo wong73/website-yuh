@@ -29,4 +29,6 @@ namespace cppdnn
 	{}
 
 	template<typename Ty_>
-	basic_layer_ptr<Ty_> so
+	basic_layer_ptr<Ty_> softmax()
+	{
+		return std::make_shared<b
