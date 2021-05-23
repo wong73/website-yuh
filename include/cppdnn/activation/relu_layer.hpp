@@ -12,3 +12,24 @@ namespace cppdnn
 	public:
 		basic_relu_layer() noexcept = default;
 		basic_relu_layer(const basic_relu_layer& relu) = delete;
+		basic_relu_layer(basic_relu_layer&& relu) = delete;
+		virtual ~basic_relu_layer() override = default;
+
+	public:
+		basic_relu_layer& operator=(const basic_relu_layer& relu) = delete;
+		basic_relu_layer& operator=(basic_relu_layer&& relu) = delete;
+		bool operator==(const basic_relu_layer& relu) = delete;
+		bool operator!=(const basic_relu_layer& relu) = delete;
+
+	protected:
+		virtual void function(const basic_object_ptr<Ty_>& input) const override;
+	};
+
+	using relu_layer = basic_relu_layer<double>;
+
+	template<typename Ty_ = double>
+	basic_layer_ptr<Ty_> relu();
+}
+
+#include "details/relu_layer.hpp"
+#endif
