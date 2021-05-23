@@ -14,3 +14,22 @@ namespace cppdnn
 		basic_sigmoid_layer(const basic_sigmoid_layer& sigmoid) = delete;
 		basic_sigmoid_layer(basic_sigmoid_layer&& sigmoid) = delete;
 		virtual ~basic_sigmoid_layer() override = default;
+
+	public:
+		basic_sigmoid_layer& operator=(const basic_sigmoid_layer& sigmoid) = delete;
+		basic_sigmoid_layer& operator=(basic_sigmoid_layer&& sigmoid) = delete;
+		bool operator==(const basic_sigmoid_layer& sigmoid) = delete;
+		bool operator!=(const basic_sigmoid_layer& sigmoid) = delete;
+
+	protected:
+		virtual void function(const basic_object_ptr<Ty_>& input) const override;
+	};
+
+	using sigmoid_layer = basic_sigmoid_layer<double>;
+
+	template<typename Ty_ = double>
+	basic_layer_ptr<Ty_> sigmoid();
+}
+
+#include "details/sigmoid_layer.hpp"
+#endif
