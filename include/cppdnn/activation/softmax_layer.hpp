@@ -5,4 +5,5 @@
 
 namespace cppdnn
 {
-	templ
+	template<typename Ty_>
+	class basic_softmax_layer 
