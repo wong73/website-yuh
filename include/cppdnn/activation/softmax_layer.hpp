@@ -9,4 +9,5 @@ namespace cppdnn
 	class basic_softmax_layer : public basic_activation_layer<Ty_>
 	{
 	public:
-		basic_softmax_layer() noe
+		basic_softmax_layer() noexcept = default;
+		basic_softmax_layer(cons
