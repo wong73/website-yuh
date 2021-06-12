@@ -6,4 +6,7 @@
 namespace cppdnn
 {
 	template<typename Ty_>
-	class basic_softmax_layer : public basic_activation_layer<Ty_
+	class basic_softmax_layer : public basic_activation_layer<Ty_>
+	{
+	public:
+		basic_softmax_layer() noe
