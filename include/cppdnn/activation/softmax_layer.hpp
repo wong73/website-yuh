@@ -10,4 +10,4 @@ namespace cppdnn
 	{
 	public:
 		basic_softmax_layer() noexcept = default;
-		basic_softmax_layer(cons
+		basic_softmax_layer(const basic_softmax_layer& softmax) = delete;
