@@ -12,4 +12,5 @@ namespace cppdnn
 		basic_softmax_layer() noexcept = default;
 		basic_softmax_layer(const basic_softmax_layer& softmax) = delete;
 		basic_softmax_layer(basic_softmax_layer&& softmax) = delete;
-		virtual ~basic_
+		virtual ~basic_softmax_layer() override = default;
+
