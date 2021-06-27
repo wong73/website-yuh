@@ -15,4 +15,5 @@ namespace cppdnn
 		virtual ~basic_softmax_layer() override = default;
 
 	public:
-		basic_softmax_layer& operator=(const basic_softmax
+		basic_softmax_layer& operator=(const basic_softmax_layer& softmax) = delete;
+		basic_softmax
