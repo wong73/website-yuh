@@ -16,4 +16,5 @@ namespace cppdnn
 
 	public:
 		basic_softmax_layer& operator=(const basic_softmax_layer& softmax) = delete;
-		basic_softmax_layer& operator=(basic_softmax
+		basic_softmax_layer& operator=(basic_softmax_layer&& softmax) = delete;
+		bool operat
