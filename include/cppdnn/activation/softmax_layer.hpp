@@ -18,4 +18,7 @@ namespace cppdnn
 		basic_softmax_layer& operator=(const basic_softmax_layer& softmax) = delete;
 		basic_softmax_layer& operator=(basic_softmax_layer&& softmax) = delete;
 		bool operator==(const basic_softmax_layer& softmax) = delete;
-		bool operator!=(const basic_softmax_layer& softmax) = del
+		bool operator!=(const basic_softmax_layer& softmax) = delete;
+
+	public:
+		virtual void forward(const b
