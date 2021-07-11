@@ -21,4 +21,4 @@ namespace cppdnn
 		bool operator!=(const basic_softmax_layer& softmax) = delete;
 
 	public:
-		virtual void forward(const basic_object_ptr<Ty_>& input, b
+		virtual void forward(const basic_object_ptr<Ty_>& input, basic_object_ptr<Ty_>& output) const 
