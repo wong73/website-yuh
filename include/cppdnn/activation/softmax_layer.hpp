@@ -27,4 +27,4 @@ namespace cppdnn
 		virtual void function(const basic_object_ptr<Ty_>&) const override;
 	};
 
-	using softmax_
+	using softmax_layer = basic_softmax_layer<double>;
