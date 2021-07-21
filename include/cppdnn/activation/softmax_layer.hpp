@@ -33,4 +33,5 @@ namespace cppdnn
 	basic_layer_ptr<Ty_> softmax();
 }
 
-#include "details/s
+#include "details/softmax_layer.hpp"
+#endif
