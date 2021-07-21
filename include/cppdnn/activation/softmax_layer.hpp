@@ -30,4 +30,7 @@ namespace cppdnn
 	using softmax_layer = basic_softmax_layer<double>;
 
 	template<typename Ty_ = double>
-	basic_layer_ptr<Ty_> 
+	basic_layer_ptr<Ty_> softmax();
+}
+
+#include "details/s
