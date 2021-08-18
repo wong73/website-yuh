@@ -6,4 +6,4 @@
 namespace cppdnn
 {
 	template<typename Ty_>
-	class basic_tanh
+	class basic_tanh_layer : public basic_activation_layer<Ty
