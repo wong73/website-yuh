@@ -9,4 +9,5 @@ namespace cppdnn
 	class basic_tanh_layer : public basic_activation_layer<Ty_>
 	{
 	public:
-		basic_tanh_layer() noe
+		basic_tanh_layer() noexcept = default;
+		basic_tanh_la
