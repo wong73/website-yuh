@@ -10,4 +10,4 @@ namespace cppdnn
 	{
 	public:
 		basic_tanh_layer() noexcept = default;
-		basic_tanh_la
+		basic_tanh_layer(const basic_tanh_layer& tan
