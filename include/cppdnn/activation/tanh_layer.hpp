@@ -12,4 +12,4 @@ namespace cppdnn
 		basic_tanh_layer() noexcept = default;
 		basic_tanh_layer(const basic_tanh_layer& tanh) = delete;
 		basic_tanh_layer(basic_tanh_layer&& tanh) = delete;
-		virtual 
+		virtual ~basic_tanh_layer() override = defa
