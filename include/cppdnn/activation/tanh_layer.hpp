@@ -15,4 +15,4 @@ namespace cppdnn
 		virtual ~basic_tanh_layer() override = default;
 
 	public:
-		basic_tanh_layer& op
+		basic_tanh_layer& operator=(const basic_tanh_layer& tanh) = d
