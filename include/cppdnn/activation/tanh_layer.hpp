@@ -17,4 +17,4 @@ namespace cppdnn
 	public:
 		basic_tanh_layer& operator=(const basic_tanh_layer& tanh) = delete;
 		basic_tanh_layer& operator=(basic_tanh_layer&& tanh) = delete;
-		bool oper
+		bool operator==(const basic_tanh_layer& tanh) = delet
