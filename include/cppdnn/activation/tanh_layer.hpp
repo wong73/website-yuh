@@ -18,4 +18,7 @@ namespace cppdnn
 		basic_tanh_layer& operator=(const basic_tanh_layer& tanh) = delete;
 		basic_tanh_layer& operator=(basic_tanh_layer&& tanh) = delete;
 		bool operator==(const basic_tanh_layer& tanh) = delete;
-		bool operator!=(const basic_tanh_layer&
+		bool operator!=(const basic_tanh_layer& tanh) = delete;
+
+	protected:
+		virtual void f
