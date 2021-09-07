@@ -21,4 +21,4 @@ namespace cppdnn
 		bool operator!=(const basic_tanh_layer& tanh) = delete;
 
 	protected:
-		virtual void f
+		virtual void function(const basic_object_ptr<Ty_>&
