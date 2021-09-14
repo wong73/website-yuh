@@ -24,4 +24,5 @@ namespace cppdnn
 		virtual void function(const basic_object_ptr<Ty_>& input) const override;
 	};
 
-	using 
+	using tanh_layer = basic_tanh_layer<double>;
+
