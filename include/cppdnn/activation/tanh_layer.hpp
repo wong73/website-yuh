@@ -27,4 +27,7 @@ namespace cppdnn
 	using tanh_layer = basic_tanh_layer<double>;
 
 	template<typename Ty_ = double>
-	b
+	basic_layer_ptr<Ty_> tanh();
+}
+
+#include "det
