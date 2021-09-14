@@ -26,3 +26,5 @@ namespace cppdnn
 
 	using tanh_layer = basic_tanh_layer<double>;
 
+	template<typename Ty_ = double>
+	b
