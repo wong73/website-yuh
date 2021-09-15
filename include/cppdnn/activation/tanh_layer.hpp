@@ -30,4 +30,5 @@ namespace cppdnn
 	basic_layer_ptr<Ty_> tanh();
 }
 
-#include "det
+#include "details/tanh_layer.hpp"
+#endif
