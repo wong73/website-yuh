@@ -5,3 +5,6 @@
 #include <utility>
 
 namespace cppdnn
+{
+	template<typename Ty_>
+	basic_fully_co
