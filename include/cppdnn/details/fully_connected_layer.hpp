@@ -13,4 +13,5 @@ namespace cppdnn
 		bias_.resize(input);
 
 		std::random_device rd;
-		std::m
+		std::mt19937_64 mt(rd());
+		std::uniform_real_distri
