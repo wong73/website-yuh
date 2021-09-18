@@ -7,4 +7,6 @@
 namespace cppdnn
 {
 	template<typename Ty_>
-	basic_fully_connected_layer<Ty_>::basic_fully_connected_layer(std::size_t unit, st
+	basic_fully_connected_layer<Ty_>::basic_fully_connected_layer(std::size_t unit, std::size_t input)
+	{
+		weig
