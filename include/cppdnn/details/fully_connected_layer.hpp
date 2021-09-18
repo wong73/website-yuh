@@ -16,4 +16,6 @@ namespace cppdnn
 		std::mt19937_64 mt(rd());
 		std::uniform_real_distribution<double> dist(-1, 1);
 
-		for (std::size_t i = 0; i < unit; +
+		for (std::size_t i = 0; i < unit; ++i)
+		{
+			std::vector<Ty_> ve
