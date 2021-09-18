@@ -9,4 +9,5 @@ namespace cppdnn
 	template<typename Ty_>
 	basic_fully_connected_layer<Ty_>::basic_fully_connected_layer(std::size_t unit, std::size_t input)
 	{
-		weig
+		weights_.reserve(unit);
+		bias_.resize(
