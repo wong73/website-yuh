@@ -14,4 +14,6 @@ namespace cppdnn
 
 		std::random_device rd;
 		std::mt19937_64 mt(rd());
-		std::uniform_real_distri
+		std::uniform_real_distribution<double> dist(-1, 1);
+
+		f
