@@ -10,4 +10,7 @@ namespace cppdnn
 	basic_fully_connected_layer<Ty_>::basic_fully_connected_layer(std::size_t unit, std::size_t input)
 	{
 		weights_.reserve(unit);
-		bias_.resize(
+		bias_.resize(input);
+
+		std::random_device rd;
+		std::m
