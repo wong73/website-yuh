@@ -23,4 +23,7 @@ namespace cppdnn
 
 			for (std::size_t j = 0; j < input; ++j)
 			{
-				v
+				vec[j] = dist(mt);
+			}
+
+			weigh
