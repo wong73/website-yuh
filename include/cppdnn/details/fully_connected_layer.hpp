@@ -21,4 +21,6 @@ namespace cppdnn
 			std::vector<Ty_> vec;
 			vec.resize(input);
 
-			for
+			for (std::size_t j = 0; j < input; ++j)
+			{
+				v
