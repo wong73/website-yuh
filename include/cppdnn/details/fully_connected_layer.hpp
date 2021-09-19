@@ -18,4 +18,7 @@ namespace cppdnn
 
 		for (std::size_t i = 0; i < unit; ++i)
 		{
-			std::vector<Ty_> ve
+			std::vector<Ty_> vec;
+			vec.resize(input);
+
+			for
