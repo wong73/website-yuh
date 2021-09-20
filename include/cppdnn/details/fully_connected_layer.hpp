@@ -26,4 +26,4 @@ namespace cppdnn
 				vec[j] = dist(mt);
 			}
 
-			weigh
+			weights_.push_back(std::make_shared<basic_vector<Ty_>>(
