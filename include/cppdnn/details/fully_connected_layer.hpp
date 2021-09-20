@@ -29,4 +29,5 @@ namespace cppdnn
 			weights_.push_back(std::make_shared<basic_vector<Ty_>>(std::move(vec)));
 		}
 
-		fo
+		for (std::size_t i = 0; i < input; ++i)
+		{
