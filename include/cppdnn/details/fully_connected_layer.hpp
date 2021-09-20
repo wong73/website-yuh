@@ -35,4 +35,5 @@ namespace cppdnn
 		}
 	}
 
-	templ
+	template<typename Ty_>
+	void basic_fully_conn
