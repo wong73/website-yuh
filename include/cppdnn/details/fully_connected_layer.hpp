@@ -31,3 +31,8 @@ namespace cppdnn
 
 		for (std::size_t i = 0; i < input; ++i)
 		{
+			bias_[i] = dist(mt);
+		}
+	}
+
+	templ
