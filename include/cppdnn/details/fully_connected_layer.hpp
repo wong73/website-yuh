@@ -36,4 +36,4 @@ namespace cppdnn
 	}
 
 	template<typename Ty_>
-	void basic_fully_connected_layer<Ty_>::forward(const basic_objec
+	void basic_fully_connected_layer<Ty_>::forward(const basic_object_ptr<Ty_>& input, basic_object_ptr<Ty_>& out
