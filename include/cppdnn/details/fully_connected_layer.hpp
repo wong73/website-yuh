@@ -36,4 +36,4 @@ namespace cppdnn
 	}
 
 	template<typename Ty_>
-	void basic_fully_conn
+	void basic_fully_connected_layer<Ty_>::forward(const basic_objec
