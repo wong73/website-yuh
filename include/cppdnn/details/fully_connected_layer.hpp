@@ -42,4 +42,6 @@ namespace cppdnn
 		std::shared_ptr<basic_vector<Ty_>> output_vec = std::make_shared<basic_vector<Ty_>>(unit);
 		output = output_vec;
 
-		for (std::size_t i = 0; i 
+		for (std::size_t i = 0; i < unit; ++i)
+		{
+			basic_object_ptr
