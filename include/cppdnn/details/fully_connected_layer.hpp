@@ -48,3 +48,7 @@ namespace cppdnn
 			*unit_output += basic_value<Ty_>(bias_[i]);
 		
 			(*output_vec)[i] = to_value_ref(unit_output)->data();
+		}
+	}
+
+	template<typename Ty_>
