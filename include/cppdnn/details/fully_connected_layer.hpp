@@ -52,3 +52,4 @@ namespace cppdnn
 	}
 
 	template<typename Ty_>
+	std::size_t basic_fully_connected_
