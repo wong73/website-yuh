@@ -39,4 +39,5 @@ namespace cppdnn
 	void basic_fully_connected_layer<Ty_>::forward(const basic_object_ptr<Ty_>& input, basic_object_ptr<Ty_>& output) const
 	{
 		const std::size_t unit = this->unit();
-		std::shared_ptr<basic_vector<Ty_>> output_vec = std::make_sha
+		std::shared_ptr<basic_vector<Ty_>> output_vec = std::make_shared<basic_vector<Ty_>>(unit);
+		output 
