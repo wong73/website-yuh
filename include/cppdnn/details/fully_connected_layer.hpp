@@ -45,4 +45,6 @@ namespace cppdnn
 		for (std::size_t i = 0; i < unit; ++i)
 		{
 			basic_object_ptr<Ty_> unit_output = *input * *weights_[i];
-			*unit_output += basic_value<Ty_>(bi
+			*unit_output += basic_value<Ty_>(bias_[i]);
+		
+			(*output_vec)[i] 
