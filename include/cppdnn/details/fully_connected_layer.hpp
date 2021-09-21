@@ -47,4 +47,4 @@ namespace cppdnn
 			basic_object_ptr<Ty_> unit_output = *input * *weights_[i];
 			*unit_output += basic_value<Ty_>(bias_[i]);
 		
-			(*output_vec)[i] 
+			(*output_vec)[i] = to_value_ref(unit_output)->data();
