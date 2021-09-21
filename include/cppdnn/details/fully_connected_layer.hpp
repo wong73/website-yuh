@@ -44,4 +44,4 @@ namespace cppdnn
 
 		for (std::size_t i = 0; i < unit; ++i)
 		{
-			basic_object_ptr
+			basic_object_ptr<Ty_> unit_output = *input * *weights_[i]
