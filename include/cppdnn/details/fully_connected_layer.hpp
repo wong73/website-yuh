@@ -40,4 +40,6 @@ namespace cppdnn
 	{
 		const std::size_t unit = this->unit();
 		std::shared_ptr<basic_vector<Ty_>> output_vec = std::make_shared<basic_vector<Ty_>>(unit);
-		output 
+		output = output_vec;
+
+		for (std::size_t i = 0; i 
