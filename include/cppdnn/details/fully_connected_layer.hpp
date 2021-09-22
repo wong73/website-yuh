@@ -56,4 +56,5 @@ namespace cppdnn
 	{
 		return weights_.size();
 	}
-	template<typename T
+	template<typename Ty_>
+	std::size_t basic_fully_con
