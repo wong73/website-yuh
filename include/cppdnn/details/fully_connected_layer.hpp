@@ -57,4 +57,5 @@ namespace cppdnn
 		return weights_.size();
 	}
 	template<typename Ty_>
-	std::size_t basic_fully_con
+	std::size_t basic_fully_connected_layer<Ty_>::input() const noexcept
+	{
