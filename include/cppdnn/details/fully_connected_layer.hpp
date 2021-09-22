@@ -54,4 +54,6 @@ namespace cppdnn
 	template<typename Ty_>
 	std::size_t basic_fully_connected_layer<Ty_>::unit() const noexcept
 	{
-		retu
+		return weights_.size();
+	}
+	template<typename T
