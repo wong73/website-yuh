@@ -65,4 +65,4 @@ namespace cppdnn
 	template<typename Ty_>
 	basic_layer_ptr<Ty_> fc(std::size_t unit, std::size_t input)
 	{
-		return std::make_shared<basi
+		return std::make_shared<basic_fully_connected_layer<Ty_>>(unit, input)
