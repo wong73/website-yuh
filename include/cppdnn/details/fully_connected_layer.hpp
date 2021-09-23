@@ -62,4 +62,5 @@ namespace cppdnn
 		return bias_.size();
 	}
 
-	template<t
+	template<typename Ty_>
+	basic_layer_ptr<Ty_>
