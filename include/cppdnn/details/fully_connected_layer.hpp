@@ -59,3 +59,7 @@ namespace cppdnn
 	template<typename Ty_>
 	std::size_t basic_fully_connected_layer<Ty_>::input() const noexcept
 	{
+		return bias_.size();
+	}
+
+	template<t
