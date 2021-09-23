@@ -63,4 +63,5 @@ namespace cppdnn
 	}
 
 	template<typename Ty_>
-	basic_layer_ptr<Ty_>
+	basic_layer_ptr<Ty_> fc(std::size_t unit, std::size_t input)
+	{
