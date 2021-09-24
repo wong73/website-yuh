@@ -38,3 +38,13 @@ namespace cppdnn
 		}
 
 		return output_prev;
+	}
+
+	template<typename Ty_>
+	const std::vector<basic_layer_ptr<Ty_>>& basic_network<Ty_>::layers() const noexcept
+	{
+		return layers_;
+	}
+}
+
+#endif
