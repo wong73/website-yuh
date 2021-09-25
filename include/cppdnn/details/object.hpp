@@ -105,3 +105,40 @@ namespace cppdnn
 	basic_value<Ty_>& basic_value<Ty_>::operator=(const basic_value& value) noexcept(std::is_nothrow_copy_assignable<Ty_>::value)
 	{
 		data_ = value.data_;
+		return *this;
+	}
+	template<typename Ty_>
+	basic_value<Ty_>& basic_value<Ty_>::operator=(basic_value&& value) noexcept(std::is_nothrow_move_assignable<Ty_>::value)
+	{
+		data_ = std::move(value.data_);
+		return *this;
+	}
+	template<typename Ty_>
+	bool basic_value<Ty_>::operator==(const basic_value& value) const noexcept(noexcept(std::declval<Ty_>() == std::declval<Ty_>()))
+	{
+		return data_ == value.data_;
+	}
+	template<typename Ty_>
+	bool basic_value<Ty_>::operator!=(const basic_value& value) const noexcept(noexcept(std::declval<Ty_>() != std::declval<Ty_>()))
+	{
+		return data_ != value.data_;
+	}
+
+	template<typename Ty_>
+	basic_object<Ty_>& basic_value<Ty_>::operator=(const basic_object<Ty_>& object)
+	{
+		if (!instance_of<basic_value>(&object))
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_value.");
+
+		return operator=(dynamic_cast<const basic_value&>(object));
+	}
+	template<typename Ty_>
+	basic_object<Ty_>& basic_value<Ty_>::operator=(basic_object<Ty_>&& object)
+	{
+		if (!instance_of<basic_value>(&object))
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_value.");
+
+		return operator=(dynamic_cast<basic_value&&>(object));
+	}
+	template<typename Ty_>
+	bool basic_value<Ty_>::operator==(const basic_object<Ty_>& object) const
