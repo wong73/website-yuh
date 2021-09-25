@@ -219,3 +219,38 @@ namespace cppdnn
 		{
 			return std::make_shared<basic_value>(operator*(dynamic_cast<const basic_value&>(object)));
 		}
+		else if (instance_of<basic_value_ref<Ty_>>(&object))
+		{
+			return std::make_shared<basic_value>(operator*(dynamic_cast<const basic_value_ref<Ty_>&>(object)));
+		}
+		else
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_value.");
+	}
+	template<typename Ty_>
+	basic_object<Ty_>& basic_value<Ty_>::operator+=(const basic_object<Ty_>& object)
+	{
+		if (instance_of<basic_value>(&object))
+		{
+			return operator+=(dynamic_cast<const basic_value&>(object));
+		}
+		else if (instance_of<basic_value_ref<Ty_>>(&object))
+		{
+			return operator+=(dynamic_cast<const basic_value_ref<Ty_>&>(object));
+		}
+		else
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_value.");
+	}
+	template<typename Ty_>
+	basic_object<Ty_>& basic_value<Ty_>::operator*=(const basic_object<Ty_>& object)
+	{
+		if (instance_of<basic_value>(&object))
+		{
+			return operator*=(dynamic_cast<const basic_value&>(object));
+		}
+		else if (instance_of<basic_value_ref<Ty_>>(&object))
+		{
+			return operator*=(dynamic_cast<const basic_value_ref<Ty_>&>(object));
+		}
+		else
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_value.");
+	}
