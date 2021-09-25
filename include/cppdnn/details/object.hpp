@@ -254,3 +254,42 @@ namespace cppdnn
 		else
 			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_value.");
 	}
+
+	template<typename Ty_>
+	bool basic_value<Ty_>::is_value() const noexcept
+	{
+		return true;
+	}
+
+	template<typename Ty_>
+	std::shared_ptr<basic_object<Ty_>> basic_value<Ty_>::copy() const
+	{
+		return std::make_shared<basic_value<Ty_>>(data_);
+	}
+	template<typename Ty_>
+	void basic_value<Ty_>::for_each(const std::function<void(std::shared_ptr<basic_object<Ty_>>)>&) const
+	{
+		throw not_impl("cppdnn::basic_value::for_each isn't implemented.");
+	}
+	template<typename Ty_>
+	void basic_value<Ty_>::apply(const std::function<void(const std::shared_ptr<basic_object<Ty_>>&)>&)
+	{
+		throw not_impl("cppdnn::basic_value::apply isn't implemented.");
+	}
+
+	template<typename Ty_>
+	std::string basic_value<Ty_>::to_string_priv(bool detail) const
+	{
+		std::string result;
+
+		if (detail)
+		{
+			result = "value(";
+		}
+
+		result += std::to_string(data_);
+
+		if (detail)
+		{
+			result += ')';
+		}
