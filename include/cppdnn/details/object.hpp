@@ -68,3 +68,40 @@ namespace cppdnn
 	void basic_object<Ty_>::println(std::ostream& stream, bool detail) const
 	{
 		stream << to_string(detail) << '\n';
+	}
+
+	template<typename Ty_>
+	std::ostream& operator<<(std::ostream& stream, const basic_object<Ty_>& object)
+	{
+		return object.print(stream), stream;
+	}
+	template<typename Ty_>
+	std::ostream& operator<<(std::ostream& stream, const basic_object_ptr<Ty_>& object)
+	{
+		return object->print(stream), stream;
+	}
+}
+
+namespace cppdnn
+{
+	template<typename Ty_>
+	basic_value<Ty_>::basic_value(const Ty_& value) noexcept(std::is_nothrow_copy_constructible<Ty_>::value)
+		: data_(value)
+	{}
+	template<typename Ty_>
+	basic_value<Ty_>::basic_value(Ty_ && value) noexcept(std::is_nothrow_move_constructible<Ty_>::value)
+		: data_(std::move(value))
+	{}
+	template<typename Ty_>
+	basic_value<Ty_>::basic_value(const basic_value& value)noexcept(std::is_nothrow_copy_constructible<Ty_>::value)
+		: data_(value.data_)
+	{}
+	template<typename Ty_>
+	basic_value<Ty_>::basic_value(basic_value&& value) noexcept(std::is_nothrow_move_constructible<Ty_>::value)
+		: data_(std::move(value.data_))
+	{}
+
+	template<typename Ty_>
+	basic_value<Ty_>& basic_value<Ty_>::operator=(const basic_value& value) noexcept(std::is_nothrow_copy_assignable<Ty_>::value)
+	{
+		data_ = value.data_;
