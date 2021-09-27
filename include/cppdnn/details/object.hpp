@@ -415,3 +415,45 @@ namespace cppdnn
 	basic_value<Ty_> basic_value_ref<Ty_>::operator-(const basic_value<Ty_>& value) const noexcept(noexcept(std::declval<Ty_>() - std::declval<Ty_>()))
 	{
 		return basic_value<Ty_>(*data_ - value.data());
+	}
+	template<typename Ty_>
+	basic_value<Ty_> basic_value_ref<Ty_>::operator*(const basic_value_ref& value) const noexcept(noexcept(std::declval<Ty_>() * std::declval<Ty_>()))
+	{
+		return basic_value<Ty_>(*data_ * *value.data_);
+	}
+	template<typename Ty_>
+	basic_value<Ty_> basic_value_ref<Ty_>::operator*(const basic_value<Ty_>& value) const noexcept(noexcept(std::declval<Ty_>() * std::declval<Ty_>()))
+	{
+		return basic_value<Ty_>(*data_ * value.data());
+	}
+	template<typename Ty_>
+	basic_value<Ty_> basic_value_ref<Ty_>::operator/(const basic_value_ref& value) const noexcept(noexcept(std::declval<Ty_>() / std::declval<Ty_>()))
+	{
+		return basic_value<Ty_>(*data_ / *value.data_);
+	}
+	template<typename Ty_>
+	basic_value<Ty_> basic_value_ref<Ty_>::operator/(const basic_value<Ty_>& value) const noexcept(noexcept(std::declval<Ty_>() / std::declval<Ty_>()))
+	{
+		return basic_value<Ty_>(*data_ / value.data());
+	}
+
+	template<typename Ty_>
+	std::shared_ptr<basic_object<Ty_>> basic_value_ref<Ty_>::operator+(const basic_object<Ty_>& object) const
+	{
+		if (instance_of<basic_value<Ty_>>(&object))
+		{
+			return std::make_shared<basic_value<Ty_>>(operator+(dynamic_cast<const basic_value<Ty_>&>(object)));
+		}
+		else if (instance_of<basic_value_ref<Ty_>>(&object))
+		{
+			return std::make_shared<basic_value<Ty_>>(operator+(dynamic_cast<const basic_value_ref&>(object)));
+		}
+		else
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_value_ref.");
+	}
+	template<typename Ty_>
+	std::shared_ptr<basic_object<Ty_>> basic_value_ref<Ty_>::operator*(const basic_object<Ty_>& object) const
+	{
+		if (instance_of<basic_value<Ty_>>(&object))
+		{
+			return std::make_shared<basic_value<Ty_>>(operator*(dynamic_cast<const basic_value<Ty_>&>(object)));
