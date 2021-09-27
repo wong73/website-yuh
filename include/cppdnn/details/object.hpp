@@ -329,3 +329,50 @@ namespace cppdnn
 	{
 		*data_ = value.data();
 		return *this;
+	}
+	template<typename Ty_>
+	basic_value_ref<Ty_>& basic_value_ref<Ty_>::operator=(const basic_value_ref& value) noexcept
+	{
+		data_ = value.data_;
+		return *this;
+	}
+	template<typename Ty_>
+	bool basic_value_ref<Ty_>::operator==(const basic_value_ref& value) const noexcept
+	{
+		return data_ == value.data_;
+	}
+	template<typename Ty_>
+	bool basic_value_ref<Ty_>::operator!=(const basic_value_ref& value) const noexcept
+	{
+		return data_ != value.data_;
+	}
+
+	template<typename Ty_>
+	basic_object<Ty_>& basic_value_ref<Ty_>::operator=(const basic_object<Ty_>& object)
+	{
+		if (instance_of<basic_value_ref<Ty_>>(&object))
+		{
+			return operator=(dynamic_cast<const basic_value_ref<Ty_>&>(object));
+		}
+		else if (instance_of<basic_value<Ty_>>(&object))
+		{
+			data_ = const_cast<Ty_*>(&dynamic_cast<const basic_value<Ty_>&>(object).data());
+			return *this;
+		}
+		else
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_value_ref.");
+	}
+	template<typename Ty_>
+	basic_object<Ty_>& basic_value_ref<Ty_>::operator=(basic_object<Ty_>&& object)
+	{
+		return operator=(object);
+	}
+	template<typename Ty_>
+	bool basic_value_ref<Ty_>::operator==(const basic_object<Ty_>& object) const
+	{
+		if (instance_of<basic_value_ref<Ty_>>(&object))
+		{
+			return data_ == dynamic_cast<const basic_value_ref<Ty_>&>(object).data_;
+		}
+		else if (instance_of<basic_value<Ty_>>(&object))
+		{
