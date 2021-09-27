@@ -531,3 +531,36 @@ namespace cppdnn
 		if (detail)
 		{
 			result += ')';
+		}
+
+		return result;
+	}
+
+	template<typename Ty_>
+	const Ty_& basic_value_ref<Ty_>::data() const noexcept
+	{
+		return *data_;
+	}
+	template<typename Ty_>
+	Ty_& basic_value_ref<Ty_>::data() noexcept
+	{
+		return *data_;
+	}
+
+	template<typename Ty_>
+	std::shared_ptr<basic_value_ref<Ty_>> to_value_ref(const basic_object_ptr<Ty_>& object)
+	{
+		if (instance_of<basic_value<Ty_>>(object.get()))
+		{
+			return std::make_shared<basic_value_ref<Ty_>>(*const_cast<Ty_*>(&dynamic_cast<basic_value<Ty_>*>(object.get())->data()));
+		}
+		else if (instance_of<basic_value_ref<Ty_>>(object.get()))
+		{
+			return std::dynamic_pointer_cast<basic_value_ref<Ty_>>(object);
+		}
+		else
+			throw invalid_type("");
+	}
+}
+
+#endif
