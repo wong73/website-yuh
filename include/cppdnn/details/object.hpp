@@ -495,3 +495,39 @@ namespace cppdnn
 	}
 
 	template<typename Ty_>
+	bool basic_value_ref<Ty_>::is_value() const noexcept
+	{
+		return true;
+	}
+
+	template<typename Ty_>
+	std::shared_ptr<basic_object<Ty_>> basic_value_ref<Ty_>::copy() const
+	{
+		return std::make_shared<basic_value_ref<Ty_>>(*data_);
+	}
+	template<typename Ty_>
+	void basic_value_ref<Ty_>::for_each(const std::function<void(std::shared_ptr<basic_object<Ty_>>)>&) const
+	{
+		throw not_impl("cppdnn::basic_value_ref::for_each isn't implemented.");
+	}
+	template<typename Ty_>
+	void basic_value_ref<Ty_>::apply(const std::function<void(const std::shared_ptr<basic_object<Ty_>>&)>&)
+	{
+		throw not_impl("cppdnn::basic_value_ref::apply isn't implemented.");
+	}
+
+	template<typename Ty_>
+	std::string basic_value_ref<Ty_>::to_string_priv(bool detail) const
+	{
+		std::string result;
+
+		if (detail)
+		{
+			result = "value(ref: ";
+		}
+
+		result += std::to_string(*data_);
+
+		if (detail)
+		{
+			result += ')';
