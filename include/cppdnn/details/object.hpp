@@ -376,3 +376,42 @@ namespace cppdnn
 		}
 		else if (instance_of<basic_value<Ty_>>(&object))
 		{
+			return data_ == &dynamic_cast<const basic_value<Ty_>&>(object).data();
+		}
+		else
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_value_ref.");
+	}
+	template<typename Ty_>
+	bool basic_value_ref<Ty_>::operator!=(const basic_object<Ty_>& object) const
+	{
+		if (instance_of<basic_value_ref<Ty_>>(&object))
+		{
+			return data_ != dynamic_cast<const basic_value_ref<Ty_>&>(object).data_;
+		}
+		else if (instance_of<basic_value<Ty_>>(&object))
+		{
+			return data_ != &dynamic_cast<const basic_value<Ty_>&>(object).data();
+		}
+		else
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_value_ref.");
+	}
+		
+	template<typename Ty_>
+	basic_value<Ty_> basic_value_ref<Ty_>::operator+(const basic_value_ref& value) const noexcept(noexcept(std::declval<Ty_>() + std::declval<Ty_>()))
+	{
+		return basic_value<Ty_>(*data_ + *value.data_);
+	}
+	template<typename Ty_>
+	basic_value<Ty_> basic_value_ref<Ty_>::operator+(const basic_value<Ty_>& value) const noexcept(noexcept(std::declval<Ty_>() + std::declval<Ty_>()))
+	{
+		return basic_value<Ty_>(*data_ + value.data());
+	}
+	template<typename Ty_>
+	basic_value<Ty_> basic_value_ref<Ty_>::operator-(const basic_value_ref& value) const noexcept(noexcept(std::declval<Ty_>() - std::declval<Ty_>()))
+	{
+		return basic_value<Ty_>(*data_ - *value.data_);
+	}
+	template<typename Ty_>
+	basic_value<Ty_> basic_value_ref<Ty_>::operator-(const basic_value<Ty_>& value) const noexcept(noexcept(std::declval<Ty_>() - std::declval<Ty_>()))
+	{
+		return basic_value<Ty_>(*data_ - value.data());
