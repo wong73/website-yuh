@@ -293,3 +293,39 @@ namespace cppdnn
 		{
 			result += ')';
 		}
+
+		return result;
+	}
+
+	template<typename Ty_>
+	const Ty_& basic_value<Ty_>::data() const noexcept
+	{
+		return data_;
+	}
+	template<typename Ty_>
+	Ty_& basic_value<Ty_>::data() noexcept
+	{
+		return data_;
+	}
+}
+
+namespace cppdnn
+{
+	template<typename Ty_>
+	basic_value_ref<Ty_>::basic_value_ref(Ty_& value) noexcept
+		: data_(&value)
+	{}
+	template<typename Ty_>
+	basic_value_ref<Ty_>::basic_value_ref(basic_value<Ty_>& value) noexcept
+		: data_(value.data())
+	{}
+	template<typename Ty_>
+	basic_value_ref<Ty_>::basic_value_ref(const basic_value_ref& value) noexcept
+		: data_(value.data_)
+	{}
+
+	template<typename Ty_>
+	basic_value_ref<Ty_>& basic_value_ref<Ty_>::operator=(const basic_value<Ty_>& value) noexcept
+	{
+		*data_ = value.data();
+		return *this;
