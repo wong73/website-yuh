@@ -170,3 +170,21 @@ namespace cppdnn
 	{
 		return std::make_shared<basic_training_set<Ty_>>(input, output);
 	}
+
+	template<typename Ty_>
+	basic_training_data_ptr<Ty_> make_training_data(const std::vector<std::pair<std::vector<Ty_>, std::vector<Ty_>>>& data)
+	{
+		basic_training_data_ptr<Ty_> result = std::make_shared<basic_training_data<Ty_>>();
+
+		for (const std::pair<std::vector<Ty_>, std::vector<Ty_>>& set : data)
+		{
+			result->push_back(std::make_shared<basic_training_set<Ty_>>(
+				std::make_shared<basic_vector<Ty_>>(set.first),
+				std::make_shared<basic_vector<Ty_>>(set.second)));
+		}
+
+		return result;
+	}
+}
+
+#endif
