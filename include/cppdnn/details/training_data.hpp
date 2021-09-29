@@ -78,3 +78,56 @@ namespace cppdnn
 	}
 	template<typename Ty_>
 	typename basic_training_data<Ty_>::reverse_iterator basic_training_data<Ty_>::rbegin() noexcept
+	{
+		return data_.rbegin();
+	}
+	template<typename Ty_>
+	typename basic_training_data<Ty_>::const_reverse_iterator basic_training_data<Ty_>::rbegin() const noexcept
+	{
+		return data_.rbegin();
+	}
+	template<typename Ty_>
+	typename basic_training_data<Ty_>::const_reverse_iterator basic_training_data<Ty_>::crbegin() const noexcept
+	{
+		return data_.crbegin();
+	}
+	template<typename Ty_>
+	typename basic_training_data<Ty_>::reverse_iterator basic_training_data<Ty_>::rend() noexcept
+	{
+		return data_.rend();
+	}
+	template<typename Ty_>
+	typename basic_training_data<Ty_>::const_reverse_iterator basic_training_data<Ty_>::rend() const noexcept
+	{
+		return data_.rend();
+	}
+	template<typename Ty_>
+	typename basic_training_data<Ty_>::const_reverse_iterator basic_training_data<Ty_>::crend() const noexcept
+	{
+		return data_.crend();
+	}
+
+	template<typename Ty_>
+	bool basic_training_data<Ty_>::empty() const noexcept
+	{
+		return data_.empty();
+	}
+	template<typename Ty_>
+	std::size_t basic_training_data<Ty_>::size() const noexcept
+	{
+		return data_.size();
+	}
+
+	template<typename Ty_>
+	void basic_training_data<Ty_>::push_back(const basic_training_set_base_ptr<Ty_>& set)
+	{
+		data_.push_back(set);
+	}
+	template<typename Ty_>
+	void basic_training_data<Ty_>::push_back(basic_training_set_base_ptr<Ty_>&& set)
+	{
+		data_.push_back(std::move(set));
+	}
+	template<typename Ty_>
+	void basic_training_data<Ty_>::erase(const_iterator pos)
+	{
