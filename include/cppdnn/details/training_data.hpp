@@ -131,3 +131,42 @@ namespace cppdnn
 	template<typename Ty_>
 	void basic_training_data<Ty_>::erase(const_iterator pos)
 	{
+		data_.erase(pos);
+	}
+}
+
+namespace cppdnn
+{
+	template<typename Ty_>
+	basic_training_set<Ty_>::basic_training_set(const basic_object_ptr<Ty_>& input, const basic_object_ptr<Ty_>& output)
+		: input_(input), output_(output)
+	{}
+	template<typename Ty_>
+	basic_training_set<Ty_>::basic_training_set(basic_object_ptr<Ty_>&& input, const basic_object_ptr<Ty_>& output)
+		: input_(std::move(input)), output_(output)
+	{}
+	template<typename Ty_>
+	basic_training_set<Ty_>::basic_training_set(const basic_object_ptr<Ty_>& input, basic_object_ptr<Ty_>&& output)
+		: input_(input), output_(std::move(output))
+	{}
+	template<typename Ty_>
+	basic_training_set<Ty_>::basic_training_set(basic_object_ptr<Ty_>&& input, basic_object_ptr<Ty_>&& output) noexcept
+		: input_(std::move(input)), output_(std::move(output))
+	{}
+
+	template<typename Ty_>
+	basic_object_ptr<Ty_> basic_training_set<Ty_>::input() const
+	{
+		return input_;
+	}
+	template<typename Ty_>
+	basic_object_ptr<Ty_> basic_training_set<Ty_>::output() const
+	{
+		return output_;
+	}
+
+	template<typename Ty_>
+	basic_training_set_base_ptr<Ty_> make_training_set(const basic_object_ptr<Ty_>& input, const basic_object_ptr<Ty_>& output)
+	{
+		return std::make_shared<basic_training_set<Ty_>>(input, output);
+	}
