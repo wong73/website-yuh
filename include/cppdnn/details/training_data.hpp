@@ -37,3 +37,44 @@ namespace cppdnn
 	}
 
 	template<typename Ty_>
+	const Ty_& basic_training_data<Ty_>::at(std::size_t index) const noexcept
+	{
+		return data_.at(index);
+	}
+	template<typename Ty_>
+	Ty_& basic_training_data<Ty_>::at(std::size_t index) noexcept
+	{
+		return data_.at(index);
+	}
+	template<typename Ty_>
+	typename basic_training_data<Ty_>::iterator basic_training_data<Ty_>::begin() noexcept
+	{
+		return data_.begin();
+	}
+	template<typename Ty_>
+	typename basic_training_data<Ty_>::const_iterator basic_training_data<Ty_>::begin() const noexcept
+	{
+		return data_.begin();
+	}
+	template<typename Ty_>
+	typename basic_training_data<Ty_>::const_iterator basic_training_data<Ty_>::cbegin() const noexcept
+	{
+		return data_.cbegin();
+	}
+	template<typename Ty_>
+	typename basic_training_data<Ty_>::iterator basic_training_data<Ty_>::end() noexcept
+	{
+		return data_.end();
+	}
+	template<typename Ty_>
+	typename basic_training_data<Ty_>::const_iterator basic_training_data<Ty_>::end() const noexcept
+	{
+		return data_.end();
+	}
+	template<typename Ty_>
+	typename basic_training_data<Ty_>::const_iterator basic_training_data<Ty_>::cend() const noexcept
+	{
+		return data_.cend();
+	}
+	template<typename Ty_>
+	typename basic_training_data<Ty_>::reverse_iterator basic_training_data<Ty_>::rbegin() noexcept
