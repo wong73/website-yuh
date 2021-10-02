@@ -5,4 +5,5 @@
 
 namespace cppdnn
 {
-	template<typename Ty
+	template<typename Ty1_, typename Ty2_>
+	bool ins
