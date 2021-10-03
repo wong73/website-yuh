@@ -105,3 +105,41 @@ namespace cppdnn
 			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_vector.");
 
 		return operator!=(dynamic_cast<const basic_vector&>(object));
+	}
+
+	template<typename Ty_>
+	basic_value<Ty_> basic_vector<Ty_>::operator*(const basic_vector<Ty_>& vector) const
+	{
+		if (size() != vector.size())
+			throw incompatible_argument("The size of argument 'vector' isn't compatible with it.");
+
+		Ty_ result = 0;
+
+		for (std::size_t i = 0; i < size(); ++i)
+		{
+			result += data_[i] * vector.data_[i];
+		}
+
+		return result;
+	}
+
+	template<typename Ty_>
+	std::shared_ptr<basic_object<Ty_>> basic_vector<Ty_>::operator+(const basic_object<Ty_>&) const
+	{
+		throw not_impl("cppdnn::basic_vector::operator+ isn't implemented.");
+	}
+	template<typename Ty_>
+	std::shared_ptr<basic_object<Ty_>> basic_vector<Ty_>::operator*(const basic_object<Ty_>& object) const
+	{
+		if (!instance_of<basic_vector<Ty_>>(&object))
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_value.");
+
+		return std::make_shared<basic_value<Ty_>>(operator*(dynamic_cast<const basic_vector&>(object)));
+	}
+	template<typename Ty_>
+	basic_object<Ty_>& basic_vector<Ty_>::operator+=(const basic_object<Ty_>&)
+	{
+		throw not_impl("cppdnn::basic_vector::operator+= isn't implemented.");
+	}
+	template<typename Ty_>
+	basic_object<Ty_>& basic_vector<Ty_>::operator*=(const basic_object<Ty_>&)
