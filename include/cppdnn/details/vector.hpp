@@ -143,3 +143,42 @@ namespace cppdnn
 	}
 	template<typename Ty_>
 	basic_object<Ty_>& basic_vector<Ty_>::operator*=(const basic_object<Ty_>&)
+	{
+		throw not_impl("cppdnn::basic_vector::operator*= isn't implemented.");
+	}
+
+	template<typename Ty_>
+	std::shared_ptr<basic_object<Ty_>> basic_vector<Ty_>::copy() const
+	{
+		return std::make_shared<basic_vector<Ty_>>(data_);
+	}
+	template<typename Ty_>
+	void basic_vector<Ty_>::for_each(const std::function<void(std::shared_ptr<basic_object<Ty_>>)>& func) const
+	{
+		for_each_<Ty_>(func);
+	}
+	template<typename Ty_>
+	void basic_vector<Ty_>::apply(const std::function<void(const std::shared_ptr<basic_object<Ty_>>&)>& func)
+	{
+		apply_<Ty_>(func);
+	}
+
+	template<typename Ty_>
+	std::string basic_vector<Ty_>::to_string_priv(bool detail) const
+	{
+		std::string result;
+
+		if (detail)
+		{
+			result = "vector";
+		}
+		result += '(';
+		if (detail)
+		{
+			result += std::to_string(data_.size());
+			result += ": ";
+		}
+
+		bool is_first = true;
+
+		for (const Ty_& value : data_)
