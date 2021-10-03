@@ -219,3 +219,46 @@ namespace cppdnn
 	typename basic_vector<Ty_>::const_iterator basic_vector<Ty_>::begin() const noexcept
 	{
 		return data_.begin();
+	}
+	template<typename Ty_>
+	typename basic_vector<Ty_>::const_iterator basic_vector<Ty_>::cbegin() const noexcept
+	{
+		return data_.cbegin();
+	}
+	template<typename Ty_>
+	typename basic_vector<Ty_>::iterator basic_vector<Ty_>::end() noexcept
+	{
+		return data_.end();
+	}
+	template<typename Ty_>
+	typename basic_vector<Ty_>::const_iterator basic_vector<Ty_>::end() const noexcept
+	{
+		return data_.end();
+	}
+	template<typename Ty_>
+	typename basic_vector<Ty_>::const_iterator basic_vector<Ty_>::cend() const noexcept
+	{
+		return data_.cend();
+	}
+	template<typename Ty_>
+	typename basic_vector<Ty_>::reverse_iterator basic_vector<Ty_>::rbegin() noexcept
+	{
+		return data_.rbegin();
+	}
+	template<typename Ty_>
+	typename basic_vector<Ty_>::const_reverse_iterator basic_vector<Ty_>::rbegin() const noexcept
+	{
+		return data_.rbegin();
+	}
+	template<typename Ty_>
+	typename basic_vector<Ty_>::const_reverse_iterator basic_vector<Ty_>::crbegin() const noexcept
+	{
+		return data_.crbegin();
+	}
+	template<typename Ty_>
+	typename basic_vector<Ty_>::reverse_iterator basic_vector<Ty_>::rend() noexcept
+	{
+		return data_.rend();
+	}
+	template<typename Ty_>
+	typename basic_vector<Ty_>::const_reverse_iterator basic_vector<Ty_>::rend() const noexcept
