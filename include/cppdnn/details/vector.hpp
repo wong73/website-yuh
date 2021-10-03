@@ -262,3 +262,33 @@ namespace cppdnn
 	}
 	template<typename Ty_>
 	typename basic_vector<Ty_>::const_reverse_iterator basic_vector<Ty_>::rend() const noexcept
+	{
+		return data_.rend();
+	}
+	template<typename Ty_>
+	typename basic_vector<Ty_>::const_reverse_iterator basic_vector<Ty_>::crend() const noexcept
+	{
+		return data_.crend();
+	}
+
+	template<typename Ty_>
+	template<typename Ty2_>
+	typename std::enable_if<details::is_object_ptr<Ty2_>::value>::type basic_vector<Ty_>::for_each_(const std::function<void(std::shared_ptr<basic_object<Ty_>>)>& func) const
+	{
+		std::shared_ptr<basic_value_ref<Ty_>> data = std::make_shared<basic_value_ref<Ty_>>();
+
+		for (const Ty_& value : data_)
+		{
+			*data = basic_value_ref<Ty_>(const_cast<Ty_&>(value));
+			func(data);
+		}
+	}
+	template<typename Ty_>
+	template<typename Ty2_>
+	typename std::enable_if<!details::is_object_ptr<Ty2_>::value>::type basic_vector<Ty_>::for_each_(const std::function<void(std::shared_ptr<basic_object<Ty_>>)>& func) const
+	{
+		std::shared_ptr<basic_value_ref<Ty_>> data = std::make_shared<basic_value_ref<Ty_>>();
+
+		for (const Ty_& value : data_)
+		{
+			*data = basic_value_ref<Ty_>(const_cast<Ty_&>(value));
