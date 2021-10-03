@@ -79,3 +79,29 @@ namespace cppdnn
 	{
 		if (!instance_of<basic_vector<Ty_>>(&object))
 			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_vector.");
+
+		return operator=(dynamic_cast<const basic_vector&>(object));
+	}
+	template<typename Ty_>
+	basic_object<Ty_>& basic_vector<Ty_>::operator=(basic_object<Ty_>&& object)
+	{
+		if (!instance_of<basic_vector<Ty_>>(&object))
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_vector.");
+
+		return operator=(dynamic_cast<basic_vector&&>(object));
+	}
+	template<typename Ty_>
+	bool basic_vector<Ty_>::operator==(const basic_object<Ty_>& object) const
+	{
+		if (!instance_of<basic_vector<Ty_>>(&object))
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_vector.");
+
+		return operator==(dynamic_cast<const basic_vector&>(object));
+	}
+	template<typename Ty_>
+	bool basic_vector<Ty_>::operator!=(const basic_object<Ty_>& object) const
+	{
+		if (!instance_of<basic_vector<Ty_>>(&object))
+			throw invalid_type("Argument 'object' can't be converted to cppdnn::basic_vector.");
+
+		return operator!=(dynamic_cast<const basic_vector&>(object));
