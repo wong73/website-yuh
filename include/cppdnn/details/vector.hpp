@@ -182,3 +182,40 @@ namespace cppdnn
 		bool is_first = true;
 
 		for (const Ty_& value : data_)
+		{
+			if (is_first)
+			{
+				is_first = false;
+			}
+			else
+			{
+				result += ' ';
+			}
+
+			result += std::to_string(value);
+		}
+
+		result += ')';
+
+		return result;
+	}
+
+	template<typename Ty_>
+	const Ty_& basic_vector<Ty_>::at(std::size_t index) const noexcept
+	{
+		return data_.at(index);
+	}
+	template<typename Ty_>
+	Ty_& basic_vector<Ty_>::at(std::size_t index) noexcept
+	{
+		return data_.at(index);
+	}
+	template<typename Ty_>
+	typename basic_vector<Ty_>::iterator basic_vector<Ty_>::begin() noexcept
+	{
+		return data_.begin();
+	}
+	template<typename Ty_>
+	typename basic_vector<Ty_>::const_iterator basic_vector<Ty_>::begin() const noexcept
+	{
+		return data_.begin();
