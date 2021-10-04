@@ -2,4 +2,6 @@
 #define CPPDNN_HEADER_EXCEPTION_HPP
 
 #include <stdexcept>
-#in
+#include <string>
+
+namespace cppdnn
