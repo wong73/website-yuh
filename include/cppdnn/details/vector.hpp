@@ -366,3 +366,25 @@ namespace cppdnn
 	template<typename Ty_>
 	std::shared_ptr<basic_vector<Ty_>> make_geometric_vector(Ty_&& first, Ty_&& last, Ty_&& ratio)
 	{
+		std::vector<Ty_> vector;
+
+		if (first > last)
+		{
+			for (Ty_ i = first; i >= last; i /= ratio)
+			{
+				vector.push_back(i);
+			}
+		}
+		else
+		{
+			for (Ty_ i = first; i <= last; i *= ratio)
+			{
+				vector.push_back(i);
+			}
+		}
+
+		return std::make_shared<basic_vector<Ty_>>(std::move(vector));
+	}
+}
+
+#endif
