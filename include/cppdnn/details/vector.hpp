@@ -323,3 +323,46 @@ namespace cppdnn
 	template<typename Ty_>
 	bool basic_vector<Ty_>::empty() const noexcept
 	{
+		return data_.empty();
+	}
+	template<typename Ty_>
+	std::size_t basic_vector<Ty_>::size() const noexcept
+	{
+		return data_.size();
+	}
+
+	template<typename Ty_, typename... Args_>
+	std::shared_ptr<basic_vector<Ty_>> make_vector(Args_&&... args)
+	{
+		return std::make_shared<basic_vector<Ty_>>(std::vector<Ty_>{ static_cast<Ty_>(std::forward<Args_>(args))... });
+	}
+	template<typename Ty_>
+	std::shared_ptr<basic_vector<Ty_>> make_arithmetic_vector(Ty_&& first, Ty_&& last)
+	{
+		return make_arithmetic_vector<Ty_>(std::forward<Ty_>(first), std::forward<Ty_>(last), 1);
+	}
+	template<typename Ty_>
+	std::shared_ptr<basic_vector<Ty_>> make_arithmetic_vector(Ty_&& first, Ty_&& last, Ty_&& diff)
+	{
+		std::vector<Ty_> vector;
+
+		if (first > last)
+		{
+			for (Ty_ i = first; i >= last; i -= diff)
+			{
+				vector.push_back(i);
+			}
+		}
+		else
+		{
+			for (Ty_ i = first; i <= last; i += diff)
+			{
+				vector.push_back(i);
+			}
+		}
+
+		return std::make_shared<basic_vector<Ty_>>(std::move(vector));
+	}
+	template<typename Ty_>
+	std::shared_ptr<basic_vector<Ty_>> make_geometric_vector(Ty_&& first, Ty_&& last, Ty_&& ratio)
+	{
