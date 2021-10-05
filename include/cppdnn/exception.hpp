@@ -5,3 +5,5 @@
 #include <string>
 
 namespace cppdnn
+{
+#define ERROR(base, name)							
