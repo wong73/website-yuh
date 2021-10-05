@@ -6,4 +6,5 @@
 
 namespace cppdnn
 {
-#define ERROR(base, name)							
+#define ERROR(base, name)										\
+	class name : public std:: 
