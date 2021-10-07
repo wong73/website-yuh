@@ -12,4 +12,4 @@ namespace cppdnn
 	public:														\
 		using std:: base :: base;								\
 	}
-#d
+#define RUNTIME_ERROR(name) ERROR(runti
