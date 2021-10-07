@@ -9,4 +9,7 @@ namespace cppdnn
 #define ERROR(base, name)										\
 	class name : public std:: base								\
 	{															\
-	public:														
+	public:														\
+		using std:: base :: base;								\
+	}
+#d
