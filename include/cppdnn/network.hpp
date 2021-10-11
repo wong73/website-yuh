@@ -4,4 +4,8 @@
 #include <cppdnn/layer.hpp>
 #include <cppdnn/object.hpp>
 
-#include <v
+#include <vector>
+
+namespace cppdnn
+{
+	template<typen
