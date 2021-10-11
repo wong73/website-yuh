@@ -2,4 +2,6 @@
 #define CPPDNN_HEADER_NETWORK_HPP
 
 #include <cppdnn/layer.hpp>
-#incl
+#include <cppdnn/object.hpp>
+
+#include <v
