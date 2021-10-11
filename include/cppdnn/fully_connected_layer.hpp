@@ -31,3 +31,18 @@ namespace cppdnn
 
 	public:
 		std::size_t unit() const noexcept;
+		std::size_t input() const noexcept;
+
+	private:
+		std::vector<std::shared_ptr<basic_vector<Ty_>>> weights_;
+		std::vector<Ty_> bias_;
+	};
+
+	using fully_connected_layer = basic_fully_connected_layer<double>;
+
+	template<typename Ty_ = double>
+	basic_layer_ptr<Ty_> fc(std::size_t unit, std::size_t input);
+}
+
+#include "details/fully_connected_layer.hpp"
+#endif
