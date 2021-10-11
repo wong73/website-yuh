@@ -14,4 +14,6 @@ namespace cppdnn
 	}
 #define RUNTIME_ERROR(name) ERROR(runtime_error, name)
 
-	RUNTIME
+	RUNTIME_ERROR(invalid_type);
+	RUNTIME_ERROR(not_impl);
+	RU
