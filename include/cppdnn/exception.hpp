@@ -17,3 +17,6 @@ namespace cppdnn
 	RUNTIME_ERROR(invalid_type);
 	RUNTIME_ERROR(not_impl);
 	RUNTIME_ERROR(incompatible_argument);
+}
+
+#endif
