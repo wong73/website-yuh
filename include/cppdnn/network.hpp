@@ -8,4 +8,7 @@
 
 namespace cppdnn
 {
-	template<typen
+	template<typename Ty_>
+	class basic_network
+	{
+	public:
