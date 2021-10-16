@@ -20,4 +20,5 @@ namespace cppdnn
 	public:
 		basic_network& operator=(const basic_network& network) = delete;
 		basic_network& operator=(basic_network&& network) = delete;
-		bool operator==(con
+		bool operator==(const basic_network& network) = delete;
+	
