@@ -18,4 +18,4 @@ namespace cppdnn
 		~basic_network() = default;
 
 	public:
-		basic_network& operator=(const
+		basic_network& operator=(const basic_network& network) = delete;
