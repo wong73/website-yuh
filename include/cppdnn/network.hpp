@@ -12,3 +12,5 @@ namespace cppdnn
 	class basic_network
 	{
 	public:
+		basic_network() = default;
+		basic_networ
