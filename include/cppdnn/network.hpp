@@ -25,4 +25,5 @@ namespace cppdnn
 		basic_network& operator<<(const basic_layer_ptr<Ty_>& layer);
 
 	public:
-		template<typename Lay
+		template<typename Layer_, typename... Args_>
+		void add_la
