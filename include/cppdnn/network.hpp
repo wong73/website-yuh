@@ -27,4 +27,6 @@ namespace cppdnn
 	public:
 		template<typename Layer_, typename... Args_>
 		void add_layer(Args_&&... args);
-		void add_layer(const
+		void add_layer(const basic_layer_ptr<Ty_>& layer);
+
+		basic
