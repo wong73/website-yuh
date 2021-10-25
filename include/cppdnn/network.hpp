@@ -29,4 +29,4 @@ namespace cppdnn
 		void add_layer(Args_&&... args);
 		void add_layer(const basic_layer_ptr<Ty_>& layer);
 
-		basic
+		basic_object_ptr<Ty_> compute(co
