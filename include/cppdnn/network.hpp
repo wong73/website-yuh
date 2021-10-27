@@ -32,4 +32,4 @@ namespace cppdnn
 		basic_object_ptr<Ty_> compute(const basic_object_ptr<Ty_>& input) const;
 
 	public:
-		const std::v
+		const std::vector<basic_layer_ptr<Ty_>>& layers() const 
