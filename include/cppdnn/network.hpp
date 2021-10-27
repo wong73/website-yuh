@@ -35,4 +35,4 @@ namespace cppdnn
 		const std::vector<basic_layer_ptr<Ty_>>& layers() const noexcept;
 
 	private:
-		std::vecto
+		std::vector<basic_layer_ptr<Ty_>> layers_;
