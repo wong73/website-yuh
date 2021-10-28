@@ -38,4 +38,8 @@ namespace cppdnn
 		std::vector<basic_layer_ptr<Ty_>> layers_;
 	};
 
-	using network = basic_network<do
+	using network = basic_network<double>;
+}
+
+#include "details/network.hpp"
+#e
