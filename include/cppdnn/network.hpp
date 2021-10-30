@@ -42,4 +42,4 @@ namespace cppdnn
 }
 
 #include "details/network.hpp"
-#e
+#endif
