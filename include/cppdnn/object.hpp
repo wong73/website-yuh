@@ -10,3 +10,6 @@
 #include <utility>
 
 namespace cppdnn
+{
+	template<typename Ty_>
+	clas
