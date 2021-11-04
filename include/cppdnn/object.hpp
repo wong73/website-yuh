@@ -12,4 +12,7 @@
 namespace cppdnn
 {
 	template<typename Ty_>
-	clas
+	class basic_value;
+
+	template<typename Ty_>
+	cla
