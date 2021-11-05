@@ -22,4 +22,7 @@ namespace cppdnn
 		basic_object(basic_object&& object) = delete;
 		virtual ~basic_object() = default;
 		
-	protecte
+	protected:
+		basic_object() = default;
+
+	
