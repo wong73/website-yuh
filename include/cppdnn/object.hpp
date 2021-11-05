@@ -27,3 +27,4 @@ namespace cppdnn
 
 	public:
 		virtual basic_object& operator=(const basic_object& object) = 0;
+		virtual basic_object& operator=(basic_o
