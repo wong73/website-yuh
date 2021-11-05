@@ -20,4 +20,6 @@ namespace cppdnn
 	public:
 		basic_object(const basic_object& object) = delete;
 		basic_object(basic_object&& object) = delete;
-		v
+		virtual ~basic_object() = default;
+		
+	protecte
