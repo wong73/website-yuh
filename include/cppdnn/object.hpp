@@ -25,4 +25,5 @@ namespace cppdnn
 	protected:
 		basic_object() = default;
 
-	
+	public:
+		virtual basic_object& ope
