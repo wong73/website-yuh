@@ -15,4 +15,7 @@ namespace cppdnn
 	class basic_value;
 
 	template<typename Ty_>
-	cla
+	class basic_object
+	{
+	public:
+		basic_object(const b
