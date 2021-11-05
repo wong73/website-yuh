@@ -19,4 +19,5 @@ namespace cppdnn
 	{
 	public:
 		basic_object(const basic_object& object) = delete;
-		bas
+		basic_object(basic_object&& object) = delete;
+		v
