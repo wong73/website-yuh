@@ -28,4 +28,4 @@ namespace cppdnn
 	public:
 		virtual basic_object& operator=(const basic_object& object) = 0;
 		virtual basic_object& operator=(basic_object&& object) = 0;
-		virtual bool ope
+		virtual bool operator==(const basic_object& object) const = 
