@@ -29,4 +29,6 @@ namespace cppdnn
 		virtual basic_object& operator=(const basic_object& object) = 0;
 		virtual basic_object& operator=(basic_object&& object) = 0;
 		virtual bool operator==(const basic_object& object) const = 0;
-		virtual bool operator!=(const basic_objec
+		virtual bool operator!=(const basic_object& object) const;
+
+		virtual std::shared_ptr<bas
