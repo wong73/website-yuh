@@ -37,4 +37,6 @@ namespace cppdnn
 		virtual basic_object& operator*=(const basic_object& object) = 0;
 
 	public:
-		virtual bo
+		virtual bool is_value() const noexcept;
+
+		vi
