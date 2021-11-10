@@ -34,4 +34,7 @@ namespace cppdnn
 		virtual std::shared_ptr<basic_object<Ty_>> operator+(const basic_object& object) const = 0;
 		virtual std::shared_ptr<basic_object<Ty_>> operator*(const basic_object& object) const = 0;
 		virtual basic_object& operator+=(const basic_object& object) = 0;
-		virtual basic_object& operator*=(cons
+		virtual basic_object& operator*=(const basic_object& object) = 0;
+
+	public:
+		virtual bo
