@@ -32,4 +32,5 @@ namespace cppdnn
 		virtual bool operator!=(const basic_object& object) const;
 
 		virtual std::shared_ptr<basic_object<Ty_>> operator+(const basic_object& object) const = 0;
-		virtual std::shared_ptr<basic_object<Ty_>> operator
+		virtual std::shared_ptr<basic_object<Ty_>> operator*(const basic_object& object) const = 0;
+	
