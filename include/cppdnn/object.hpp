@@ -39,4 +39,5 @@ namespace cppdnn
 	public:
 		virtual bool is_value() const noexcept;
 
-		virtual std::shared_ptr<basic_object<Ty_>> copy(
+		virtual std::shared_ptr<basic_object<Ty_>> copy() const = 0;
+		virtual void for_each
