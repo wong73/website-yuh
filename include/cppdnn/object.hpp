@@ -44,4 +44,7 @@ namespace cppdnn
 		virtual void apply(const std::function<void(const std::shared_ptr<basic_object<Ty_>>&)>& func) = 0;
 
 	protected:
-		virtual std::string to_string_priv(bool detail) con
+		virtual std::string to_string_priv(bool detail) const = 0;
+
+	public:
+		std::string to_st
