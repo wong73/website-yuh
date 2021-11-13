@@ -51,4 +51,5 @@ namespace cppdnn
 		std::string to_string(bool detail) const;
 		void print() const;
 		void print(bool detail) const;
-		void print(std:
+		void print(std::ostream& stream) const;
+		void print(
