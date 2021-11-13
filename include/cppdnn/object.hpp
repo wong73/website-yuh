@@ -43,4 +43,5 @@ namespace cppdnn
 		virtual void for_each(const std::function<void(std::shared_ptr<basic_object<Ty_>>)>& func) const = 0;
 		virtual void apply(const std::function<void(const std::shared_ptr<basic_object<Ty_>>&)>& func) = 0;
 
-	protecte
+	protected:
+		virtual std::string to_string_priv(bool detail) con
