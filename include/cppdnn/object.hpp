@@ -50,4 +50,5 @@ namespace cppdnn
 		std::string to_string() const;
 		std::string to_string(bool detail) const;
 		void print() const;
-		void print(b
+		void print(bool detail) const;
+		void print(std:
