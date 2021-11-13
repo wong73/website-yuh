@@ -49,4 +49,5 @@ namespace cppdnn
 	public:
 		std::string to_string() const;
 		std::string to_string(bool detail) const;
-		void pr
+		void print() const;
+		void print(b
