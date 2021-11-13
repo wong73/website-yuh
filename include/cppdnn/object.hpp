@@ -47,4 +47,5 @@ namespace cppdnn
 		virtual std::string to_string_priv(bool detail) const = 0;
 
 	public:
-		std::string to_st
+		std::string to_string() const;
+		std::string to_string(b
