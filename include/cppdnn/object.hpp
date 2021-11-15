@@ -52,4 +52,6 @@ namespace cppdnn
 		void print() const;
 		void print(bool detail) const;
 		void print(std::ostream& stream) const;
-		void print(std::ostream& stream, bool detail) c
+		void print(std::ostream& stream, bool detail) const;
+		void println() const;
+		void println(bo
