@@ -62,4 +62,7 @@ namespace cppdnn
 	using object = basic_object<double>;
 	template<typename Ty_>
 	using basic_object_ptr = std::shared_ptr<basic_object<Ty_>>;
-	using object_ptr = basic_object
+	using object_ptr = basic_object_ptr<double>;
+
+	template<typename Ty_>
+	
