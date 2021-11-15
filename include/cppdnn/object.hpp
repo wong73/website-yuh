@@ -56,4 +56,4 @@ namespace cppdnn
 		void println() const;
 		void println(bool detail) const;
 		void println(std::ostream& stream) const;
-		void println(s
+		void println(std::ostream& stream, bool detail) con
