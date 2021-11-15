@@ -60,4 +60,5 @@ namespace cppdnn
 	};
 
 	using object = basic_object<double>;
-	t
+	template<typename Ty_>
+	using basic_o
