@@ -56,4 +56,8 @@ namespace cppdnn
 		void println() const;
 		void println(bool detail) const;
 		void println(std::ostream& stream) const;
-		void println(std::ostream& stream, bool detail) con
+		void println(std::ostream& stream, bool detail) const;
+	};
+
+	using object = basic_object<double>;
+	t
