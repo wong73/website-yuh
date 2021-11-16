@@ -65,4 +65,4 @@ namespace cppdnn
 	using object_ptr = basic_object_ptr<double>;
 
 	template<typename Ty_>
-	
+	std::ostream& operator<<(s
