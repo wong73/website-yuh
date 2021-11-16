@@ -65,4 +65,5 @@ namespace cppdnn
 	using object_ptr = basic_object_ptr<double>;
 
 	template<typename Ty_>
-	std::ostream& operator<<(std::ostream& stream, const basic_obj
+	std::ostream& operator<<(std::ostream& stream, const basic_object<Ty_>& object);
+	template<typenam
