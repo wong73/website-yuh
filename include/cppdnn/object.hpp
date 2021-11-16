@@ -69,4 +69,7 @@ namespace cppdnn
 	template<typename Ty_>
 	std::ostream& operator<<(std::ostream& stream, const basic_object_ptr<Ty_>& object);
 
-	template<typename 
+	template<typename Ty_>
+	class basic_value_ref;
+
+	templ
