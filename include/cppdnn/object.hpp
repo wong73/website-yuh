@@ -66,4 +66,5 @@ namespace cppdnn
 
 	template<typename Ty_>
 	std::ostream& operator<<(std::ostream& stream, const basic_object<Ty_>& object);
-	template<typenam
+	template<typename Ty_>
+	std::ostream& opera
