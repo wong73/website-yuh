@@ -76,3 +76,4 @@ namespace cppdnn
 	class basic_value : public basic_object<Ty_>
 	{
 	public:
+		basic_value() noexcept(std::is_n
