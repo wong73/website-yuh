@@ -73,4 +73,6 @@ namespace cppdnn
 	class basic_value_ref;
 
 	template<typename Ty_>
-	class basic_val
+	class basic_value : public basic_object<Ty_>
+	{
+	public:
