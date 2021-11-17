@@ -72,4 +72,5 @@ namespace cppdnn
 	template<typename Ty_>
 	class basic_value_ref;
 
-	templ
+	template<typename Ty_>
+	class basic_val
