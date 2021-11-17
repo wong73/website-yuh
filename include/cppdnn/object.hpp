@@ -77,4 +77,4 @@ namespace cppdnn
 	{
 	public:
 		basic_value() noexcept(std::is_nothrow_default_constructible<Ty_>::value) = default;
-		basic_value(const Ty_& v
+		basic_value(const Ty_& value) noexcept(std::is_nothrow_copy_constructible<
