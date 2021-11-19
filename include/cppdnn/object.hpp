@@ -81,4 +81,7 @@ namespace cppdnn
 		basic_value(Ty_&& value) noexcept(std::is_nothrow_move_constructible<Ty_>::value);
 		basic_value(const basic_value& value) noexcept(std::is_nothrow_copy_constructible<Ty_>::value);
 		basic_value(basic_value&& value) noexcept(std::is_nothrow_move_constructible<Ty_>::value);
-		virtual ~basic_value() override = def
+		virtual ~basic_value() override = default;
+	
+	public:
+		basic_value& ope
