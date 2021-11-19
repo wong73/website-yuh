@@ -80,4 +80,4 @@ namespace cppdnn
 		basic_value(const Ty_& value) noexcept(std::is_nothrow_copy_constructible<Ty_>::value);
 		basic_value(Ty_&& value) noexcept(std::is_nothrow_move_constructible<Ty_>::value);
 		basic_value(const basic_value& value) noexcept(std::is_nothrow_copy_constructible<Ty_>::value);
-		basic_value(basic_value&&
+		basic_value(basic_value&& value) noexcept(std::is_nothrow_move_co
