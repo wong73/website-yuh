@@ -84,4 +84,4 @@ namespace cppdnn
 		virtual ~basic_value() override = default;
 	
 	public:
-		basic_value& ope
+		basic_value& operator=(const basic_value& value) noe
