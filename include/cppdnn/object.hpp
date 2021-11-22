@@ -84,4 +84,5 @@ namespace cppdnn
 		virtual ~basic_value() override = default;
 	
 	public:
-		basic_value& operator=(const basic_value& value) noexcept(std::is_nothrow_copy_assignable<Ty_>:
+		basic_value& operator=(const basic_value& value) noexcept(std::is_nothrow_copy_assignable<Ty_>::value);
+		basic_value& operator
