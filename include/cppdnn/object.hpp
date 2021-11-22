@@ -85,4 +85,4 @@ namespace cppdnn
 	
 	public:
 		basic_value& operator=(const basic_value& value) noexcept(std::is_nothrow_copy_assignable<Ty_>::value);
-		basic_value& operator=(basic_value&& value) noexcept
+		basic_value& operator=(basic_value&& value) noexcept(std::is_nothrow_move_assignable<
