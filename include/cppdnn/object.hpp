@@ -89,4 +89,4 @@ namespace cppdnn
 		bool operator==(const basic_value& value) const noexcept(noexcept(std::declval<Ty_>() == std::declval<Ty_>()));
 		bool operator!=(const basic_value& value) const noexcept(noexcept(std::declval<Ty_>() != std::declval<Ty_>()));
 		
-		virtua
+		virtual basic_object<Ty_>& operator=(const ba
