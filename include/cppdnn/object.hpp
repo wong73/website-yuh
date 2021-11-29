@@ -91,4 +91,5 @@ namespace cppdnn
 		
 		virtual basic_object<Ty_>& operator=(const basic_object<Ty_>& object) override;
 		virtual basic_object<Ty_>& operator=(basic_object<Ty_>&& object) override;
-		virtual bool operator==(const
+		virtual bool operator==(const basic_object<Ty_>& object) const override;
+		vi
