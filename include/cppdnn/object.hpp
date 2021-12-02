@@ -94,4 +94,4 @@ namespace cppdnn
 		virtual bool operator==(const basic_object<Ty_>& object) const override;
 		virtual bool operator!=(const basic_object<Ty_>& object) const override;
 		
-		basic_value operator+(const basic_value& value) const noexcept(n
+		basic_value operator+(const basic_value& value) const noexcept(noexcept(std::declval<Ty_>() + std::declva
