@@ -100,4 +100,4 @@ namespace cppdnn
 		basic_value operator-(const basic_value_ref<Ty_>& value) const noexcept(noexcept(std::declval<Ty_>() - std::declval<Ty_>()));
 		basic_value operator*(const basic_value& value) const noexcept(noexcept(std::declval<Ty_>() * std::declval<Ty_>()));
 		basic_value operator*(const basic_value_ref<Ty_>& value) const noexcept(noexcept(std::declval<Ty_>() * std::declval<Ty_>()));
-		basic_value operator/(const basic_value& valu
+		basic_value operator/(const basic_value& value) const noexcept(noexcept(std::declval<Ty_>()
