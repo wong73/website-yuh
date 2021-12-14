@@ -106,4 +106,4 @@ namespace cppdnn
 		{
 			return operator=(operator+(value));
 		}
-		basic_value&
+		basic_value& operator+=(const basic_value_ref<Ty_>
