@@ -110,4 +110,4 @@ namespace cppdnn
 		{
 			return operator=(operator+(value));
 		}
-		basic_value& operator-=(cons
+		basic_value& operator-=(const basic_value& value) noexcept(std:
