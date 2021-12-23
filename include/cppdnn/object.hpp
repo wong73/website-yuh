@@ -118,4 +118,4 @@ namespace cppdnn
 		{
 			return operator=(operator-(value));
 		}
-		b
+		basic_value& operator*=(const basic_value& 
