@@ -120,4 +120,6 @@ namespace cppdnn
 		}
 		basic_value& operator*=(const basic_value& value) noexcept(std::is_nothrow_move_assignable<basic_value<Ty_>>::value && noexcept(operator*(std::declval<basic_value<Ty_>>())))
 		{
-			return oper
+			return operator=(operator*(value));
+		}
+		basic_value& operator
