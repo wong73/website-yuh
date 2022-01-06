@@ -126,4 +126,4 @@ namespace cppdnn
 		{
 			return operator=(operator*(value));
 		}
-		basic_value& operator/=(const basic_value& value) noexcept(std::is_nothrow_move_ass
+		basic_value& operator/=(const basic_value& value) noexcept(std::is_nothrow_move_assignable<basic_value<Ty_>>::value && no
