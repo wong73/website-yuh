@@ -130,3 +130,4 @@ namespace cppdnn
 		{
 			return operator=(operator/(value));
 		}
+		basic_value& operator/=(con
