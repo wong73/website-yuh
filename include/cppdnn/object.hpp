@@ -141,4 +141,6 @@ namespace cppdnn
 		virtual basic_object<Ty_>& operator*=(const basic_object<Ty_>& object) override;
 
 	public:
-		virtual bool is_value() const noexcept
+		virtual bool is_value() const noexcept override;
+
+		virtual std::shared_ptr<basic_
