@@ -143,4 +143,5 @@ namespace cppdnn
 	public:
 		virtual bool is_value() const noexcept override;
 
-		virtual std::shared_ptr<basic_
+		virtual std::shared_ptr<basic_object<Ty_>> copy() const override;
+		v
