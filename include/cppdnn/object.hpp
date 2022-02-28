@@ -152,4 +152,10 @@ namespace cppdnn
 
 	public:
 		const Ty_& data() const noexcept;
-		Ty_& data() noe
+		Ty_& data() noexcept;
+
+	private:
+		Ty_ data_;
+	};
+
+	using value = ba
