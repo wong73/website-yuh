@@ -158,4 +158,6 @@ namespace cppdnn
 		Ty_ data_;
 	};
 
-	using value = ba
+	using value = basic_value<double>;
+
+	template<
