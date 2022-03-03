@@ -161,4 +161,6 @@ namespace cppdnn
 	using value = basic_value<double>;
 
 	template<typename Ty_>
-	class basic_value_ref 
+	class basic_value_ref : public basic_object<Ty_>
+	{
+	public:
