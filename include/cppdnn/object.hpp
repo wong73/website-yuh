@@ -164,4 +164,5 @@ namespace cppdnn
 	class basic_value_ref : public basic_object<Ty_>
 	{
 	public:
-		basic_value_ref() noexc
+		basic_value_ref() noexcept = default;
+		basic_value_ref(Ty_
