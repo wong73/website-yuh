@@ -166,4 +166,5 @@ namespace cppdnn
 	public:
 		basic_value_ref() noexcept = default;
 		basic_value_ref(Ty_& value) noexcept;
-		basic_value_ref(
+		basic_value_ref(basic_value<Ty_>& value) noexcept;
+		basic_va
