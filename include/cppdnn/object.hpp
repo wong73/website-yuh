@@ -172,4 +172,4 @@ namespace cppdnn
 
 	public:
 		basic_value_ref& operator=(const basic_value<Ty_>& value) noexcept;
-		basic_value
+		basic_value_ref& operator=(const basic_value_ref& value
