@@ -171,4 +171,4 @@ namespace cppdnn
 		virtual ~basic_value_ref() override = default;
 
 	public:
-		basic_valu
+		basic_value_ref& operator=(const basic_value<T
