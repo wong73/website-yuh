@@ -173,4 +173,4 @@ namespace cppdnn
 	public:
 		basic_value_ref& operator=(const basic_value<Ty_>& value) noexcept;
 		basic_value_ref& operator=(const basic_value_ref& value) noexcept;
-		bool operator==(c
+		bool operator==(const basic_value_ref& value) const noe
