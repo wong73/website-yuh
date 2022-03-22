@@ -174,4 +174,4 @@ namespace cppdnn
 		basic_value_ref& operator=(const basic_value<Ty_>& value) noexcept;
 		basic_value_ref& operator=(const basic_value_ref& value) noexcept;
 		bool operator==(const basic_value_ref& value) const noexcept;
-		bool operator!=(co
+		bool operator!=(const basic_value_ref& value) const noexcept;
