@@ -177,4 +177,4 @@ namespace cppdnn
 		bool operator!=(const basic_value_ref& value) const noexcept;
 
 		virtual basic_object<Ty_>& operator=(const basic_object<Ty_>& object) override;
-		virtual basic_object<Ty_>& ope
+		virtual basic_object<Ty_>& operator=(basic_object<Ty_>&& obje
