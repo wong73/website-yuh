@@ -182,4 +182,4 @@ namespace cppdnn
 		virtual bool operator!=(const basic_object<Ty_>& object) const override;
 
 		basic_value<Ty_> operator+(const basic_value_ref& value) const noexcept(noexcept(std::declval<Ty_>() + std::declval<Ty_>()));
-		basic_value<Ty_> operato
+		basic_value<Ty_> operator+(const basic_value<Ty_>& value) const
