@@ -193,4 +193,4 @@ namespace cppdnn
 		{
 			return operator=(operator+(value));
 		}
-		basic_value_ref& operator+=(const basic_value<Ty_>& valu
+		basic_value_ref& operator+=(const basic_value<Ty_>& value) noexcept(std::is_nothrow_move_ass
