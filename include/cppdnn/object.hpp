@@ -205,4 +205,4 @@ namespace cppdnn
 		{
 			return operator=(operator-(value));
 		}
-		basic_value_ref& oper
+		basic_value_ref& operator*=(const basic_value_ref& value) noe
