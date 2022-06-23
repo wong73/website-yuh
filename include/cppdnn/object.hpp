@@ -222,4 +222,4 @@ namespace cppdnn
 			return operator=(operator/(value));
 		}
 
-	
+		virtual std::shared_ptr<basic_obje
