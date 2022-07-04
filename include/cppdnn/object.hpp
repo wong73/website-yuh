@@ -222,4 +222,5 @@ namespace cppdnn
 			return operator=(operator/(value));
 		}
 
-		virtual std::shared_ptr<basic_object<Ty_>> operator+(const basic_ob
+		virtual std::shared_ptr<basic_object<Ty_>> operator+(const basic_object<Ty_>& object) const override;
+		virtual 
