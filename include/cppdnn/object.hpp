@@ -225,4 +225,4 @@ namespace cppdnn
 		virtual std::shared_ptr<basic_object<Ty_>> operator+(const basic_object<Ty_>& object) const override;
 		virtual std::shared_ptr<basic_object<Ty_>> operator*(const basic_object<Ty_>& object) const override;
 		virtual basic_object<Ty_>& operator+=(const basic_object<Ty_>& object) override;
-		virtual basic_object<Ty_>& operator*=(const basi
+		virtual basic_object<Ty_>& operator*=(const basic_object<Ty_>& object) overri
