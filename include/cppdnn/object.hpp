@@ -230,4 +230,4 @@ namespace cppdnn
 	public:
 		virtual bool is_value() const noexcept override;
 		
-	
+		virtual std::shared_ptr<bas
