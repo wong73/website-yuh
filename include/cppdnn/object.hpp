@@ -230,4 +230,5 @@ namespace cppdnn
 	public:
 		virtual bool is_value() const noexcept override;
 		
-		virtual std::shared_ptr<basic_object<Ty_>> copy() const ove
+		virtual std::shared_ptr<basic_object<Ty_>> copy() const override;
+		virtual void for_each(const std::fu
