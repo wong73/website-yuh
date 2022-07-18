@@ -238,4 +238,8 @@ namespace cppdnn
 		virtual std::string to_string_priv(bool detail) const override;
 
 	public:
-		const Ty_& data() const noexcept
+		const Ty_& data() const noexcept;
+		Ty_& data() noexcept;
+
+	private:
+		Ty_
