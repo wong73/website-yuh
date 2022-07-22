@@ -242,4 +242,7 @@ namespace cppdnn
 		Ty_& data() noexcept;
 
 	private:
-		Ty_
+		Ty_* data_ = nullptr;
+	};
+
+	template<typenam
