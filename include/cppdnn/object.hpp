@@ -246,4 +246,4 @@ namespace cppdnn
 	};
 
 	template<typename Ty_>
-	std::shared_ptr<basic_value_
+	std::shared_ptr<basic_value_ref<Ty_>> to_value_ref(const basic_object_pt
