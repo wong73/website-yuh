@@ -245,4 +245,5 @@ namespace cppdnn
 		Ty_* data_ = nullptr;
 	};
 
-	template<typenam
+	template<typename Ty_>
+	std::shared_ptr<basic_value_
