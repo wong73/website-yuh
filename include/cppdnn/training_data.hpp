@@ -112,3 +112,24 @@ namespace cppdnn
 		basic_training_set& operator=(basic_training_set&& set) = delete;
 		bool operator==(const basic_training_set& set) = delete;
 		bool operator!=(const basic_training_set& set) = delete;
+		
+	public:
+		virtual basic_object_ptr<Ty_> input() const override;
+		virtual basic_object_ptr<Ty_> output() const override;
+
+	private:
+		basic_object_ptr<Ty_> input_;
+		basic_object_ptr<Ty_> output_;
+	};
+
+	using training_set = basic_training_set<double>;
+
+	template<typename Ty_ = double>
+	basic_training_set_base_ptr<Ty_> make_training_set(const basic_object_ptr<Ty_>& input, const basic_object_ptr<Ty_>& output);
+
+	template<typename Ty_ = double>
+	basic_training_data_ptr<Ty_> make_training_data(const std::vector<std::pair<std::vector<Ty_>, std::vector<Ty_>>>& data);
+}
+
+#include "details/training_data.hpp"
+#endif
