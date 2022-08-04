@@ -41,3 +41,35 @@ namespace cppdnn
 	template<typename Ty_>
 	class basic_training_data final
 	{
+	public:
+		using iterator = typename std::vector<basic_training_set_base_ptr<Ty_>>::iterator;
+		using const_iterator = typename std::vector<basic_training_set_base_ptr<Ty_>>::const_iterator;
+		using reverse_iterator = typename std::vector<basic_training_set_base_ptr<Ty_>>::reverse_iterator;
+		using const_reverse_iterator = typename std::vector<basic_training_set_base_ptr<Ty_>>::const_reverse_iterator;
+
+	public:
+		basic_training_data() = default;
+		basic_training_data(const std::vector<basic_training_set_base_ptr<Ty_>>& vector);
+		basic_training_data(std::vector<basic_training_set_base_ptr<Ty_>>&& vector) noexcept;
+		basic_training_data(const basic_training_data& data);
+		basic_training_data(basic_training_data&& data) noexcept;
+		~basic_training_data() = default;
+
+	public:
+		basic_training_data& operator=(const basic_training_data& data) = delete;
+		basic_training_data& operator=(basic_training_data&& data) = delete;
+		bool operator==(const basic_training_data& data) = delete;
+		bool operator!=(const basic_training_data& data) = delete;
+		const basic_training_set_base_ptr<Ty_>& operator[](std::size_t index) const noexcept;
+		basic_training_set_base_ptr<Ty_>& operator[](std::size_t index) noexcept;
+
+	public:
+		const Ty_& at(std::size_t index) const noexcept;
+		Ty_& at(std::size_t index) noexcept;
+		iterator begin() noexcept;
+		const_iterator begin() const noexcept;
+		const_iterator cbegin() const noexcept;
+		iterator end() noexcept;
+		const_iterator end() const noexcept;
+		const_iterator cend() const noexcept;
+		reverse_iterator rbegin() noexcept;
