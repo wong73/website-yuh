@@ -73,3 +73,42 @@ namespace cppdnn
 		const_iterator end() const noexcept;
 		const_iterator cend() const noexcept;
 		reverse_iterator rbegin() noexcept;
+		const_reverse_iterator rbegin() const noexcept;
+		const_reverse_iterator crbegin() const noexcept;
+		reverse_iterator rend() noexcept;
+		const_reverse_iterator rend() const noexcept;
+		const_reverse_iterator crend() const noexcept;
+
+		bool empty() const noexcept;
+		std::size_t size() const noexcept;
+
+		void push_back(const basic_training_set_base_ptr<Ty_>& set);
+		void push_back(basic_training_set_base_ptr<Ty_>&& set);
+		void erase(const_iterator pos);
+
+	private:
+		std::vector<basic_training_set_base_ptr<Ty_>> data_;
+	};
+
+	using training_data = basic_training_data<double>;
+	template<typename Ty_>
+	using basic_training_data_ptr = std::shared_ptr<basic_training_data<Ty_>>;
+	using training_data_ptr = basic_training_data_ptr<double>;
+
+	template<typename Ty_>
+	class basic_training_set : public basic_training_set_base<Ty_>
+	{
+	public:
+		basic_training_set(const basic_object_ptr<Ty_>& input, const basic_object_ptr<Ty_>& output);
+		basic_training_set(basic_object_ptr<Ty_>&& input, const basic_object_ptr<Ty_>& output);
+		basic_training_set(const basic_object_ptr<Ty_>& input, basic_object_ptr<Ty_>&& output);
+		basic_training_set(basic_object_ptr<Ty_>&& input, basic_object_ptr<Ty_>&& output) noexcept;
+		basic_training_set(const basic_training_set& set) = delete;
+		basic_training_set(basic_training_set&& set) = delete;
+		virtual ~basic_training_set() override = default;
+
+	public:
+		basic_training_set& operator=(const basic_training_set& set) = delete;
+		basic_training_set& operator=(basic_training_set&& set) = delete;
+		bool operator==(const basic_training_set& set) = delete;
+		bool operator!=(const basic_training_set& set) = delete;
