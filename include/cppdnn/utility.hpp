@@ -1,1 +1,2 @@
-#ifndef 
+#ifndef CPPDNN_HEADER_UTILITY_HPP
+#define C
