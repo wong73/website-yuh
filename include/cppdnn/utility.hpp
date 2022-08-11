@@ -6,4 +6,7 @@
 namespace cppdnn
 {
 	template<typename Ty1_, typename Ty2_>
-	bool instance_of(Ty
+	bool instance_of(Ty2_* value) noexcept;
+}
+
+#include 
