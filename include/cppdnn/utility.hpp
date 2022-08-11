@@ -5,4 +5,5 @@
 
 namespace cppdnn
 {
-	template<typen
+	template<typename Ty1_, typename Ty2_>
+	bool instance_of(Ty
