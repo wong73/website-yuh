@@ -9,4 +9,5 @@ namespace cppdnn
 	bool instance_of(Ty2_* value) noexcept;
 }
 
-#include 
+#include "details/utility.hpp"
+#endif
