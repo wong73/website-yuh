@@ -1,1 +1,2 @@
-#ifndef CP
+#ifndef CPPDNN_HEADER_VECTOR_HPP
+#define CPPDNN_
