@@ -4,4 +4,5 @@
 #include <cppdnn/object.hpp>
 
 #include <cstddef>
-#include <in
+#include <initializer_list>
+#include <memory
