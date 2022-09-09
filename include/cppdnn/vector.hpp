@@ -13,4 +13,6 @@ namespace cppdnn
 	namespace details
 	{
 		template<typename Ty_>
-		struct is_obj
+		struct is_object_ptr
+		{
+			static cons
