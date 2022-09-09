@@ -15,4 +15,6 @@ namespace cppdnn
 		template<typename Ty_>
 		struct is_object_ptr
 		{
-			static cons
+			static constexpr bool value = true;
+		};
+		template<template
