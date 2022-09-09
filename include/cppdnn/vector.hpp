@@ -20,4 +20,4 @@ namespace cppdnn
 		template<template<typename> typename Ty_, typename Elem_>
 		struct is_object_ptr<std::shared_ptr<Ty_<Elem_>>>
 		{
-			static co
+			static constexpr bool value = std::is
