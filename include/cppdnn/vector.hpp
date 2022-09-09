@@ -18,4 +18,4 @@ namespace cppdnn
 			static constexpr bool value = true;
 		};
 		template<template<typename> typename Ty_, typename Elem_>
-		s
+		struct is_object_ptr<std::shared_p
