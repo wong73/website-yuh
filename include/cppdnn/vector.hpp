@@ -17,4 +17,5 @@ namespace cppdnn
 		{
 			static constexpr bool value = true;
 		};
-		template<template
+		template<template<typename> typename Ty_, typename Elem_>
+		s
