@@ -8,4 +8,7 @@
 #include <memory>
 #include <vector>
 
-namespace c
+namespace cppdnn
+{
+	namespace details
+	
