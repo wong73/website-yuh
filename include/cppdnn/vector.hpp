@@ -11,4 +11,6 @@
 namespace cppdnn
 {
 	namespace details
-	
+	{
+		template<typename Ty_>
+		struct is_obj
