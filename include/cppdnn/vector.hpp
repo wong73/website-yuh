@@ -20,4 +20,4 @@ namespace cppdnn
 		template<template<typename> typename Ty_, typename Elem_>
 		struct is_object_ptr<std::shared_ptr<Ty_<Elem_>>>
 		{
-			static constexpr bool value = std::is
+			static constexpr bool value = std::is_base_of<basic_object<Elem_>, T
