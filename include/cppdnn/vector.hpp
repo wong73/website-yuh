@@ -28,4 +28,4 @@ namespace cppdnn
 	class basic_vector : public basic_object<Ty_>
 	{
 	public:
-		using
+		using iterator = typename std::vector<Ty_>
