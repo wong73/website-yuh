@@ -25,4 +25,7 @@ namespace cppdnn
 	}
 
 	template<typename Ty_>
-	class basic_vector : public
+	class basic_vector : public basic_object<Ty_>
+	{
+	public:
+		using
