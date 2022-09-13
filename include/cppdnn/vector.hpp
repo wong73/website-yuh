@@ -30,4 +30,4 @@ namespace cppdnn
 	public:
 		using iterator = typename std::vector<Ty_>::iterator;
 		using const_iterator = typename std::vector<Ty_>::const_iterator;
-		using rever
+		using reverse_iterator = typename std::vector<Ty
