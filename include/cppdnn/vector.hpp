@@ -28,4 +28,5 @@ namespace cppdnn
 	class basic_vector : public basic_object<Ty_>
 	{
 	public:
-		using iterator = typename std::vector<Ty_>
+		using iterator = typename std::vector<Ty_>::iterator;
+		using const_iterator = typename 
