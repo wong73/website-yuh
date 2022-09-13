@@ -24,4 +24,5 @@ namespace cppdnn
 		};
 	}
 
-	template<
+	template<typename Ty_>
+	class basic_vector : public
