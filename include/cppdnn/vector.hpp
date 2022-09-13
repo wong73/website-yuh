@@ -31,4 +31,4 @@ namespace cppdnn
 		using iterator = typename std::vector<Ty_>::iterator;
 		using const_iterator = typename std::vector<Ty_>::const_iterator;
 		using reverse_iterator = typename std::vector<Ty_>::reverse_iterator;
-		using const_reverse_i
+		using const_reverse_iterator = typename std::vector<Ty_>::const_r
