@@ -34,4 +34,5 @@ namespace cppdnn
 		using const_reverse_iterator = typename std::vector<Ty_>::const_reverse_iterator;
 
 	public:
-		basic_vecto
+		basic_vector() = default;
+		basic_vector(std:
