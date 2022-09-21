@@ -35,4 +35,5 @@ namespace cppdnn
 
 	public:
 		basic_vector() = default;
-		basic_vector(std:
+		basic_vector(std::size_t size);
+		basic_vecto
