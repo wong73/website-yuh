@@ -36,4 +36,4 @@ namespace cppdnn
 	public:
 		basic_vector() = default;
 		basic_vector(std::size_t size);
-		basic_vecto
+		basic_vector(const std::vector<Ty_>& ve
