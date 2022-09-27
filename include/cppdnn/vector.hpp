@@ -40,4 +40,5 @@ namespace cppdnn
 		basic_vector(std::vector<Ty_>&& vector) noexcept;
 		basic_vector(const basic_vector& vector);
 		basic_vector(basic_vector&& vector) noexcept;
-		basic_v
+		basic_vector(std::initializer_list<Ty_> list);
+	
