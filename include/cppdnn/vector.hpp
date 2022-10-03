@@ -44,4 +44,5 @@ namespace cppdnn
 		virtual ~basic_vector() override = default;
 		
 	public:
-		basic_vector& operator
+		basic_vector& operator=(const basic_vector& vector);
+		ba
