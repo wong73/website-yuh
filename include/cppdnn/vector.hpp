@@ -41,4 +41,7 @@ namespace cppdnn
 		basic_vector(const basic_vector& vector);
 		basic_vector(basic_vector&& vector) noexcept;
 		basic_vector(std::initializer_list<Ty_> list);
-		virtual ~basic_vector() override = defau
+		virtual ~basic_vector() override = default;
+		
+	public:
+		basic_vector& operator
