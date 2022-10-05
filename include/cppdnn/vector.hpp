@@ -49,4 +49,6 @@ namespace cppdnn
 		bool operator==(const basic_vector& vector) const;
 		bool operator!=(const basic_vector& vector) const;
 		const Ty_& operator[](std::size_t index) const noexcept;
-		Ty_& operator[](std::size_t inde
+		Ty_& operator[](std::size_t index) noexcept;
+
+		virtual basic_object<Ty_>&
