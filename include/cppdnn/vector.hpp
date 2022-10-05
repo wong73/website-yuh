@@ -45,4 +45,4 @@ namespace cppdnn
 		
 	public:
 		basic_vector& operator=(const basic_vector& vector);
-		ba
+		basic_vector& operator=(basic_vector&& ve
