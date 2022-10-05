@@ -46,4 +46,5 @@ namespace cppdnn
 	public:
 		basic_vector& operator=(const basic_vector& vector);
 		basic_vector& operator=(basic_vector&& vector) noexcept;
-		bool operator==(const basic_vect
+		bool operator==(const basic_vector& vector) const;
+		bool operator!
