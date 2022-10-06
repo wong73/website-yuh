@@ -52,4 +52,4 @@ namespace cppdnn
 		Ty_& operator[](std::size_t index) noexcept;
 
 		virtual basic_object<Ty_>& operator=(const basic_object<Ty_>& object) override;
-		virtual ba
+		virtual basic_object<Ty_>& operator=(basic_object
