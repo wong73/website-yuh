@@ -51,4 +51,4 @@ namespace cppdnn
 		const Ty_& operator[](std::size_t index) const noexcept;
 		Ty_& operator[](std::size_t index) noexcept;
 
-		virtual basic_object<Ty_>&
+		virtual basic_object<Ty_>& operator=(const basic_object<Ty_
