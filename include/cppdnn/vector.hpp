@@ -59,4 +59,4 @@ namespace cppdnn
 		basic_value<Ty_> operator*(const basic_vector<Ty_>& vector) const;
 
 		virtual std::shared_ptr<basic_object<Ty_>> operator+(const basic_object<Ty_>& object) const override;
-		virtual std::shared_ptr<basic_object<Ty_
+		virtual std::shared_ptr<basic_object<Ty_>> operator*(const basic_object<Ty_>& ob
