@@ -64,4 +64,5 @@ namespace cppdnn
 		virtual basic_object<Ty_>& operator*=(const basic_object<Ty_>& object) override;
 
 	public:
-		virtual std::shared_ptr<basic_object<Ty_>> 
+		virtual std::shared_ptr<basic_object<Ty_>> copy() const override;
+		virtua
