@@ -65,4 +65,4 @@ namespace cppdnn
 
 	public:
 		virtual std::shared_ptr<basic_object<Ty_>> copy() const override;
-		virtua
+		virtual void for_each(const std::function<void(s
