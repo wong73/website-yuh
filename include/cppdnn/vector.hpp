@@ -69,4 +69,7 @@ namespace cppdnn
 		virtual void apply(const std::function<void(const std::shared_ptr<basic_object<Ty_>>&)>& func) override;
 
 	protected:
-		virtual std::string to_string_priv(bool detai
+		virtual std::string to_string_priv(bool detail) const override;
+
+	public:
+		const Ty_& at(std
