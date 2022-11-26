@@ -72,4 +72,5 @@ namespace cppdnn
 		virtual std::string to_string_priv(bool detail) const override;
 
 	public:
-		const Ty_& at(std
+		const Ty_& at(std::size_t index) const noexcept;
+	
