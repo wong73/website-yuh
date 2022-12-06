@@ -73,4 +73,4 @@ namespace cppdnn
 
 	public:
 		const Ty_& at(std::size_t index) const noexcept;
-	
+		Ty_& at(std::size_t index) noexc
