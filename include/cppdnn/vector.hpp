@@ -76,4 +76,5 @@ namespace cppdnn
 		Ty_& at(std::size_t index) noexcept;
 		iterator begin() noexcept;
 		const_iterator begin() const noexcept;
-		const
+		const_iterator cbegin() const noexcept;
+		i
