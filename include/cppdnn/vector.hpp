@@ -84,4 +84,4 @@ namespace cppdnn
 		const_reverse_iterator rbegin() const noexcept;
 		const_reverse_iterator crbegin() const noexcept;
 		reverse_iterator rend() noexcept;
-		cons
+		const_reverse_iterator rend() const noexce
