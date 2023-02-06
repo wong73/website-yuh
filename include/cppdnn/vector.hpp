@@ -91,4 +91,5 @@ namespace cppdnn
 		std::size_t size() const noexcept;
 
 	private:
-		template<typ
+		template<typename Ty2_>
+		typename std::enable
