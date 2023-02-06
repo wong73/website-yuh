@@ -87,4 +87,5 @@ namespace cppdnn
 		const_reverse_iterator rend() const noexcept;
 		const_reverse_iterator crend() const noexcept;
 
-		bool empty() const no
+		bool empty() const noexcept;
+		std::size_t size() const
