@@ -92,4 +92,4 @@ namespace cppdnn
 
 	private:
 		template<typename Ty2_>
-		typename std::enable
+		typename std::enable_if<details::is_object_ptr<Ty2_>::
