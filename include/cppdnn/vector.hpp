@@ -95,4 +95,5 @@ namespace cppdnn
 		typename std::enable_if<details::is_object_ptr<Ty2_>::value>::type for_each_(const std::function<void(std::shared_ptr<basic_object<Ty_>>)>& func) const;
 		template<typename Ty2_>
 		typename std::enable_if<!details::is_object_ptr<Ty2_>::value>::type for_each_(const std::function<void(std::shared_ptr<basic_object<Ty_>>)>& func) const;
-		template<typename T
+		template<typename Ty2_>
+		typename std::enable_if<detai
