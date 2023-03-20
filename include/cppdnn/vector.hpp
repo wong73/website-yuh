@@ -101,4 +101,7 @@ namespace cppdnn
 		typename std::enable_if<!details::is_object_ptr<Ty2_>::value>::type apply_(const std::function<void(const std::shared_ptr<basic_object<Ty_>>&)>& func) const;
 
 	private:
-		std::vector<Ty_> 
+		std::vector<Ty_> data_;
+	};
+
+	using vector = basic_vector
