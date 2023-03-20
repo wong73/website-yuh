@@ -98,4 +98,7 @@ namespace cppdnn
 		template<typename Ty2_>
 		typename std::enable_if<details::is_object_ptr<Ty2_>::value>::type apply_(const std::function<void(const std::shared_ptr<basic_object<Ty_>>&)>& func) const;
 		template<typename Ty2_>
-		typename std::enable_if<!details::is_object_ptr<Ty2_>::value>::type apply_(const std::function<void(const std::shared_ptr<basic_object<Ty_>>&)>& func
+		typename std::enable_if<!details::is_object_ptr<Ty2_>::value>::type apply_(const std::function<void(const std::shared_ptr<basic_object<Ty_>>&)>& func) const;
+
+	private:
+		std::vector<Ty_> 
