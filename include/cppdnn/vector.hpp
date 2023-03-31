@@ -104,4 +104,6 @@ namespace cppdnn
 		std::vector<Ty_> data_;
 	};
 
-	using vector = basic_vector
+	using vector = basic_vector<double>;
+
+	template<typename Ty_ = doub
