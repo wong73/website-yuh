@@ -109,4 +109,4 @@ namespace cppdnn
 	template<typename Ty_ = double, typename... Args_>
 	std::shared_ptr<basic_vector<Ty_>> make_vector(Args_&&... args);
 	template<typename Ty_>
-	std:
+	std::shared_ptr<basic_vector<Ty_>> make_ar
