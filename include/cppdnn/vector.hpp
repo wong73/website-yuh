@@ -107,4 +107,4 @@ namespace cppdnn
 	using vector = basic_vector<double>;
 
 	template<typename Ty_ = double, typename... Args_>
-	std::shared_ptr<bas
+	std::shared_ptr<basic_vector<Ty_>> make_vector(Args_&
