@@ -111,4 +111,6 @@ namespace cppdnn
 	template<typename Ty_>
 	std::shared_ptr<basic_vector<Ty_>> make_arithmetic_vector(Ty_&& first, Ty_&& last);
 	template<typename Ty_>
-	std::shared_ptr<basic_vector<Ty_>> make_arithmetic_vector(Ty_&& first, Ty_&&
+	std::shared_ptr<basic_vector<Ty_>> make_arithmetic_vector(Ty_&& first, Ty_&& last, Ty_&& diff);
+	template<typename Ty_>
+	std::sh
